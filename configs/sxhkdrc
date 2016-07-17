@@ -71,10 +71,10 @@ super + {_,shift + }c
 	bspc node -f {next,prev}
 
 # Windows-like alt-tabbing
-alt + tab
+alt + Tab
 	bspc node -f next
 
-alt + shift + tab
+alt + shift + Tab
 	bspc node -f prev
 
 # focus the next/previous desktop

@@ -16,10 +16,11 @@ cloneeverything:
 	cd clones
 	git clone https://github.com/baskerville/bspwm.git
 	git clone https://github.com/baskerville/sxhkd.git
+	cd ..
 
 installeverything:
 	echo "Building & installing bspwm and sxhkd..."
-	cd bspwm
+	cd clones/bspwm
 	make && sudo make install
 	cd ../sxhkd
 	make && sudo make install

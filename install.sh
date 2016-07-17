@@ -3,55 +3,57 @@
 LIBS="xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxft-dev libX11-xcb-dev libxcb-xtest0-dev libxinerama-dev"
 BASICS="gcc apt-file xorg fonts-inconsolata htop colortest screenfetch screen tmux"
 
+rm install.log
+
 git config --global user.name "Kienan Knight-Boehm"
 git config --global user.email "kienan@kienankb.com"
 git config --global push.default simple
 git config --global core.editor nano
 
 echo "Updating sources..."
-sudo apt-get update > /dev/null
+sudo apt-get update >> install.log
 echo "Installing needed libraries..."
-sudo apt-get install -y $LIBS > /dev/null
+sudo apt-get install -y $LIBS >> install.log
 echo "Installing needed packages..."
-sudo apt-get install -y $BASICS > /dev/null
+sudo apt-get install -y $BASICS >> install.log
 
 echo "Cloning everything we need:"
 echo "bspwm..."
-git clone https://github.com/baskerville/bspwm.git > /dev/null
+git clone https://github.com/baskerville/bspwm.git >> install.log
 echo "sxhkd..."
-git clone https://github.com/baskerville/sxhkd.git > /dev/null
+git clone https://github.com/baskerville/sxhkd.git >> install.log
 echo "xdo..."
-git clone https://github.com/baskerville/xdo.git > /dev/null
+git clone https://github.com/baskerville/xdo.git >> install.log
 echo "sutils..."
-git clone https://github.com/baskerville/sutils.git > /dev/null
+git clone https://github.com/baskerville/sutils.git >> install.log
 echo "xtitle..."
-git clone https://github.com/baskerville/xtitle.git > /dev/null
+git clone https://github.com/baskerville/xtitle.git >> install.log
 echo "lemonbar with ACTUAL FONT SUPPORT YOU ANIMALS..."
-git clone https://github.com/krypt-n/bar.git
+git clone https://github.com/krypt-n/bar.git >> install.log
 echo "dmenu..."
-git clone http://git.suckless.org/dmenu
+git clone http://git.suckless.org/dmenu >> install.log
 
 echo "Building & installing bspwm and sxhkd..."
 cd bspwm
-make
-sudo make install
+make >> install.log
+sudo make install >> install.log
 cd ../sxhkd
-make
-sudo make install
+make >> install.log
+sudo make install >> install.log
 cd ../xdo
-make
-sudo make install
+make >> install.log
+sudo make install >> install.log
 cd ../sutils
-make
-sudo make install
+make >> install.log
+sudo make install >> install.log
 cd ../xtitle
-make
-sudo make install
+make >> install.log
+sudo make install >> install.log
 cd ../bar
-make
-sudo make install
+make >> install.log
+sudo make install >> install.log
 cd ../dmenu
-sudo make clean install
+sudo make clean install >> install.log
 cd ..
 
 echo "Placing config files and scripts..."

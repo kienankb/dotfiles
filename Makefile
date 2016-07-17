@@ -12,15 +12,12 @@ getpackages:
 	sudo apt-get install -y $(BASICS) > /dev/null
 
 cloneeverything:
-	mkdir clones
-	cd clones
 	git clone https://github.com/baskerville/bspwm.git
 	git clone https://github.com/baskerville/sxhkd.git
-	cd ..
 
 installeverything:
 	echo "Building & installing bspwm and sxhkd..."
-	cd clones/bspwm
+	cd bspwm
 	make && sudo make install
 	cd ../sxhkd
 	make && sudo make install

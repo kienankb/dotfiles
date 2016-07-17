@@ -47,5 +47,5 @@ cp configs/.xinitrc ~/
 chmod +x ~/.xinitrc
 if ! grep -Fxq "PANEL_FIFO" /etc/profile
 then
-	sudo echo "export PANEL_FIFO='/tmp/panel-fifo'" >> /etc/profile
+	echo "export PANEL_FIFO='/tmp/panel-fifo'" | sudo tee -a /etc/profile
 fi

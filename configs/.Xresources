@@ -37,3 +37,5 @@
 
 xterm*transparent: true
 xterm*faceName: Inconsolata:size=10:antialias=true
+
+dmenu.font:		Inconsolata:size=10:antialias=true

@@ -51,6 +51,8 @@ chmod +x ~/.xinitrc
 if ! grep -q "PANEL_FIFO" /etc/profile ; then
 	echo "export PANEL_FIFO='/tmp/panel-fifo'" | sudo tee -a /etc/profile
 fi
+cp configs/.bashrc ~/
+chmod +x ~/.bashrc
 # all the scripts you could ever want
 mkdir -p ~/.scripts
 cp configs/scripts/* ~/.scripts

@@ -45,6 +45,6 @@ cp configs/sxhkdrc ~/.config/sxhkd/
 chmod +x ~/.config/sxhkd/sxhkdrc
 cp configs/.xinitrc ~/
 chmod +x ~/.xinitrc
-if grep -Fxq "PANEL_FIFO" /etc/profile then
+if [ grep -Fxq "PANEL_FIFO" /etc/profile ] then
 	sudo echo "export PANEL_FIFO='/tmp/panel-fifo'" >> /etc/profile
 fi

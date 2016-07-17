@@ -4,11 +4,12 @@ BASICS=gcc apt-file
 all: getpackages cloneeverything installeverything
 
 getpackages:
-	sudo apt-get update
+	echo "Updating sources..."
+	sudo apt-get update > /dev/null
 	echo "Installing needed libraries..."
-	sudo apt-get install $(LIBS) > /dev/null
+	sudo apt-get install -y $(LIBS) > /dev/null
 	echo "Installing needed packages..."
-	sudo apt-get install $(BASICS) > /dev/null
+	sudo apt-get install -y $(BASICS) > /dev/null
 
 cloneeverything:
 	mkdir clones

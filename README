@@ -4,5 +4,4 @@
 
 1. `su` yourself up and `apt-get install git sudo make`.
 2. Run `visudo` and add `*username* ALL=(ALL) NOPASSWD: ALL`; probably not a good idea, but we're going for ease of use here, trust me.  Drop out of the root shell.
-3. Run `sudo apt-get update && sudo apt-get upgrade` just to be safe.
-4. 
+3. Clone this repo somewhere.

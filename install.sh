@@ -5,6 +5,12 @@ BASICS="gcc apt-file xorg fonts-inconsolata htop colortest screenfetch screen tm
 
 rm install.log
 
+echo ""
+echo "==========================================="
+echo "YO, Y'ALL BETTER BE RUNNING THIS FROM A TTY"
+echo "==========================================="
+echo ""
+
 git config --global user.name "Kienan Knight-Boehm"
 git config --global user.email "kienan@kienankb.com"
 git config --global push.default simple
@@ -82,3 +88,11 @@ cp configs/.ssh.config ~/.ssh/config
 mkdir -p ~/.scripts
 cp configs/scripts/* ~/.scripts
 chmod +x ~/.scripts/panel ~/.scripts/panel_bar ~/.scripts/addkeys.sh
+
+echo ""
+echo "=============================================="
+echo "THINGS YOU STILL NEED TO DO, YO:"
+echo "=============================================="
+echo "* install Chrome (chrome.sh)"
+echo "* install Sublime (you're on your own)"
+echo "* put any keys in .ssh with the .osk extension"

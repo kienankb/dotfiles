@@ -19,7 +19,7 @@ cloneeverything:
 
 installeverything:
 	echo "Building & installing bspwm and sxhkd..."
-	cd clones/bspwm
+	cd bspwm
 	make && sudo make install
 	cd ../sxhkd
 	make && sudo make install

@@ -29,6 +29,6 @@ cd ..
 echo "Placing config files..."
 mkdir ~/.config ~/.config/bspwm ~/.config/sxhkd
 cp configs/bspwmrc ~/.config/bspwm/
-chmod +x configs/bspwm/bspwmrc
+chmod +x ~/.config/bspwm/bspwmrc
 cp configs/sxhkdrc ~/.config/sxhkd/
-chmod +x configs/sxhkd/sxhkdrc
+chmod +x ~/.config/sxhkd/sxhkdrc

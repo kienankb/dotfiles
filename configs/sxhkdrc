@@ -54,6 +54,10 @@ super + ctrl + {x,y,z}
 # focus/swap
 #
 
+# focus on click
+~button1
+    bspc pointer -g focus
+
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}

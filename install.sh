@@ -17,13 +17,24 @@ sudo apt-get install -y $BASICS
 echo "Cloning everything we need..."
 git clone https://github.com/baskerville/bspwm.git
 git clone https://github.com/baskerville/sxhkd.git
+git clone https://github.com/baskerville/xdo.git
+git clone https://github.com/baskerville/sutils.git
+git clone https://github.com/baskerville/xtitle.git
+git clone https://github.com/krypt-n/bar.git
 
 echo "Building & installing bspwm and sxhkd..."
 cd bspwm
 make && sudo make install
 cd ../sxhkd
 make && sudo make install
-
+cd ../xdo
+make && sudo make install
+cd ../sutils
+make && sudo make install
+cd ../xtitle
+make && sudo make install
+cd ../bar
+make && sudo make install
 cd ..
 
 echo "Placing config files..."

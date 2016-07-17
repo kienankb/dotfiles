@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LIBS="xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxft-dev libX11-xcb-dev libxcb-xtest0-dev"
-BASICS="gcc apt-file xorg"
+BASICS="gcc apt-file xorg fonts-inconsolata"
 
 git config --global user.name "Kienan Knight-Boehm"
 git config --global user.email "kienan@kienankb.com"

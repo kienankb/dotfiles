@@ -50,7 +50,7 @@ cd ../bar
 make
 sudo make install
 cd ../dmenu
-make clean install
+sudo make clean install
 cd ..
 
 echo "Placing config files and scripts..."

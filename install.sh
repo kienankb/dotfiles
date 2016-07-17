@@ -53,6 +53,7 @@ if ! grep -q "PANEL_FIFO" /etc/profile ; then
 fi
 cp configs/.bashrc ~/
 chmod +x ~/.bashrc
+cp configs/.Xresources ~/
 # all the scripts you could ever want
 mkdir -p ~/.scripts
 cp configs/scripts/* ~/.scripts

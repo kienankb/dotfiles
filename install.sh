@@ -6,6 +6,7 @@ BASICS="gcc apt-file xorg fonts-inconsolata htop colortest screenfetch screen tm
 git config --global user.name "Kienan Knight-Boehm"
 git config --global user.email "kienan@kienankb.com"
 git config --global push.default simple
+git config --global core.editor nano
 
 echo "Updating sources..."
 sudo apt-get update > /dev/null

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LIBS="xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxft-dev libX11-xcb-dev libxcb-xtest0-dev libxinerama-dev"
-BASICS="gcc apt-file xorg fonts-inconsolata htop colortest screenfetch screen tmux asciinema lolcat cowsay fortune feh"
+BASICS="gcc apt-file xorg fonts-inconsolata htop colortest screenfetch screen tmux asciinema lolcat cowsay fortune feh scrot"
 
 rm install.log
 
@@ -90,10 +90,16 @@ mkdir -p ~/.scripts
 cp configs/scripts/* ~/.scripts
 chmod +x ~/.scripts/panel ~/.scripts/panel_bar ~/.scripts/addkeys.sh
 
+# adding sources in order to install Chrome
+echo "Installing Chrome..."
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list'
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+
 echo ""
 echo "=============================================="
 echo "THINGS YOU STILL NEED TO DO, YO:"
 echo "=============================================="
-echo "* install Chrome (chrome.sh)"
 echo "* install Sublime (you're on your own)"
 echo "* put any keys in .ssh with the .osk extension"

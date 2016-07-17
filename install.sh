@@ -27,7 +27,7 @@ make && sudo make install
 cd ..
 
 echo "Placing config files..."
-mkdir ~/.config ~/.config/bspwm ~/.config/sxhkd
+mkdir -p ~/.config/bspwm ~/.config/sxhkd
 cp configs/bspwmrc ~/.config/bspwm/
 chmod +x ~/.config/bspwm/bspwmrc
 cp configs/sxhkdrc ~/.config/sxhkd/

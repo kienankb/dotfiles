@@ -1,0 +1,5 @@
+*.foreground:	#ffffff
+*.background:	#000000
+#.cursorColor:	#000000
+
+xterm*faceName:	Inconsolata:size=10

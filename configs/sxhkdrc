@@ -70,6 +70,13 @@ super + {p,b,comma,period}
 super + {_,shift + }c
 	bspc node -f {next,prev}
 
+# Windows-like alt-tabbing
+alt + tab
+	bspc node -f next
+
+alt + shift + tab
+	bspc node -f prev
+
 # focus the next/previous desktop
 super + bracket{left,right}
 	bspc desktop -f {prev,next}

@@ -64,7 +64,7 @@ cd ..
 
 echo "Placing config files and scripts..."
 # bspwm, sxhkd configs
-mkdir -p ~/.config/bspwm ~/.config/sxhkd
+mkdir -p ~/.config/bspwm ~/.config/sxhkd ~/.config/asciinema
 cp configs/bspwmrc ~/.config/bspwm/
 chmod +x ~/.config/bspwm/bspwmrc
 cp configs/sxhkdrc ~/.config/sxhkd/
@@ -83,7 +83,6 @@ cp configs/.tmux.conf ~/
 cp configs/.bash_aliases ~/
 chmod +x ~/.bash_aliases
 cp configs/.ssh.config ~/.ssh/config
-mkdir ~/.config/asciinema
 cp configs/.asciinema.config ~/.config/asciinema/config
 
 # all the scripts you could ever want

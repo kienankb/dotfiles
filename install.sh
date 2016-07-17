@@ -8,7 +8,7 @@ git config --global user.email "kienan@kienankb.com"
 git config --global push.default simple
 
 echo "Updating sources..."
-sudo apt-get update
+sudo apt-get update > /dev/null
 echo "Installing needed libraries..."
 sudo apt-get install -y $LIBS > /dev/null
 echo "Installing needed packages..."

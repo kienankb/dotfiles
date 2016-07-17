@@ -1,0 +1,6 @@
+# README
+
+### Installation:
+
+1. `su` yourself up and `apt-get install git sudo`.
+2. Run `visudo` and add `*username* ALL=(ALL) NOPASSWD: ALL`; probably not a good idea, but we're going for ease of use here, trust me.  Drop out of the root shell.

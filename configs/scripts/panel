@@ -1,6 +1,6 @@
 #! /bin/sh
 
-export PANEL_FONT="Inconsolata:size=10"
+export PANEL_FONT="Inconsolata:size=10:antialias=true"
 
 if xdo id -a "$PANEL_WM_NAME" > /dev/null ; then
 	printf "%s\n" "The panel is already running." >&2

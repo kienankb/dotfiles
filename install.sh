@@ -70,6 +70,8 @@ fi
 cp configs/.bashrc ~/
 chmod +x ~/.bashrc
 cp configs/.Xresources ~/
+cp configs/.tmux.conf ~/
+
 # all the scripts you could ever want
 mkdir -p ~/.scripts
 cp configs/scripts/* ~/.scripts

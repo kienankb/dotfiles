@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LIBS="xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev"
-BASICS="gcc apt-file"
+BASICS="gcc apt-file xorg"
 
 git config --global user.name "Kienan Knight-Boehm"
 git config --global user.email "kienan@kienankb.com"
@@ -32,3 +32,5 @@ cp configs/bspwmrc ~/.config/bspwm/
 chmod +x ~/.config/bspwm/bspwmrc
 cp configs/sxhkdrc ~/.config/sxhkd/
 chmod +x ~/.config/sxhkd/sxhkdrc
+cp configs/.xinitrc ~/
+chmod +x ~/.xinitrc

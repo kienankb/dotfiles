@@ -72,8 +72,10 @@ cp configs/.bashrc ~/
 chmod +x ~/.bashrc
 cp configs/.Xresources ~/
 cp configs/.tmux.conf ~/
+cp configs/.bash_aliases ~/
+chmod +x ~/.bash_aliases
 
 # all the scripts you could ever want
 mkdir -p ~/.scripts
 cp configs/scripts/* ~/.scripts
-chmod +x ~/.scripts/panel ~/.scripts/panel_bar
+chmod +x ~/.scripts/panel ~/.scripts/panel_bar ~/.scripts/addkeys.sh

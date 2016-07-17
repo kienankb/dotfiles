@@ -1,2 +1,2 @@
-xrdb ~/.Xresources
+xrdb /home/kienan/.Xresources
 exec bspwm

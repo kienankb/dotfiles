@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LIBS="xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxft-dev libX11-xcb-dev libxcb-xtest0-dev libxinerama-dev"
-BASICS="gcc apt-file xorg fonts-inconsolata htop colortest screenfetch screen tmux asciinema lolcat cowsay fortune feh scrot xbacklight colordiff alsa-utils ncmpcpp mpd"
+BASICS="gcc apt-file xorg fonts-inconsolata htop colortest screenfetch screen tmux asciinema lolcat cowsay fortune feh scrot xbacklight colordiff alsa-utils ncmpcpp mpd compton mc"
 
 rm install.log
 
@@ -84,6 +84,7 @@ cp configs/.bash_aliases ~/
 chmod +x ~/.bash_aliases
 cp configs/.ssh.config ~/.ssh/config
 cp configs/.asciinema.config ~/.config/asciinema/config
+cp configs/compton.conf ~/.config/
 
 # all the scripts you could ever want
 mkdir -p ~/.scripts

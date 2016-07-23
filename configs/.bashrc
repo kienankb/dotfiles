@@ -112,4 +112,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$PATH:~/.scripts
+export PATH=$PATH:~/.scripts:~/projects/pebble-sdk/bin

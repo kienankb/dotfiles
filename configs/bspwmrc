@@ -1,16 +1,14 @@
-#! /bin/sh
+#! /bin/bash
 
 sxhkd &
 
-HOSTNAME = $(hostname)
-
-if [ "$(hostname)" == "friday" ]
+if [ `hostname` == "friday" ]
 then
 	bspc monitor LVDS1 -d 1 2 3 4
-elif [ "$(hostname)" == "tuesday" ]
+elif [ `hostname)` == "tuesday" ]
 then
-	bspc monitor DP-2 -n A -d 1 2 3 4
-	bspc monitor DP-4 -n B -d 5 6 7 8
+	bspc monitor DP-4 -n A -d 1 2 3 4
+	bspc monitor DP-2 -n B -d 5 6 7 8
 else
 	echo "Unrecognized hostname"
 fi

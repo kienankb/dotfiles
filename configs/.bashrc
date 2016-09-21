@@ -112,7 +112,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export BG=003.jpg
 export PEBBLESDK=~/projects/pebble-sdk/bin
 export PATH=$PATH:$PEBBLESDK:~/.scripts
 export PS1="\[\033[38;5;208m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;141m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\][\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;81m\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]]\n\\$ \[$(tput sgr0)\]"

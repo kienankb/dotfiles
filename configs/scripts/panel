@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 export PANEL_FONT="FiraMono:size=9:antialias=true"
 
@@ -19,7 +19,13 @@ clock -sf 'S%a %H:%M' > "$PANEL_FIFO" &
 
 . panel_colors
 
-panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -n "$PANEL_WM_NAME" -g x20 -f "$PANEL_FONT" -F "$COLOR_DEFAULT_FG" -B "$COLOR_DEFAULT_BG" | sh &
+if [ `hostname` == "friday" ]
+then
+panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -n "$PANEL_WM_NAME" -g 1580x20+10+5 -f "$PANEL_FONT" -F "$COLOR_DEFAULT_FG" -B "$COLOR_DEFAULT_BG" | sh &
+elif [ `hostname` == "tuesday" ]
+then
+panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -n "$PANEL_WM_NAME" -g 1900x20+10+5 -f "$PANEL_FONT" -F "$COLOR_DEFAULT_FG" -B "$COLOR_DEFAULT_BG" | sh &
+fi
 
 wid=$(xdo id -a "$PANEL_WM_NAME")
 tries_left=20

@@ -7,3 +7,4 @@ feh --bg-fill ~/.wallpaper
 synclient VertScrollDelta=-101
 synclient HorizScrollDelta=-101
 exec bspwm
+redshift -l 42:73 &

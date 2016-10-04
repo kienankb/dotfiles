@@ -35,5 +35,4 @@
 *.color7:       #c8cacc
 *.color15:      #edeff2
 
-xterm*transparent: true
 xterm*faceName: FiraMono:size=9:antialias=true

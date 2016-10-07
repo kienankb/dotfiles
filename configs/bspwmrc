@@ -2,16 +2,15 @@
 
 sxhkd &
 
-if [ `hostname` == "friday" ]
+bspc monitor ^1 -n '' -d 1 2 3 4
+
+if [ `hostname` == "tuesday" ]
 then
-	bspc monitor ^1 -d 1 2 3 4
-elif [ `hostname` == "tuesday" ]
-then
-	bspc monitor ^2 -d 5 6 7 8
+	bspc monitor ^2 -n '' -d 5 6 7 8
 fi
 
 bspc config top_padding 0
-bspc config -m primary top_padding 25
+bspc config -m ^1 top_padding 25
 bspc config border_width 1
 bspc config window_gap 15
 bspc config split_ratio          0.50
@@ -20,16 +19,6 @@ bspc config gapless_monocle      true
 bspc config focus_follows_pointer	true
 
 compton --config "/home/kienan/.config/compton.conf" -b
-
-# TIME FOR ALL THAT DANK PANEL WORK
-FORMAT="FiraMono:size=9:antialias=true"
-if [ `hostname` == "friday" ]
-then
-	PANEL_WIDTH=1580
-elif [ `hostname` == "tuesday" ]
-then
-	PANEL_WIDTH=1900
-fi
 
 panel &
 # Custom panel setup

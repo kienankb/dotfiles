@@ -25,12 +25,20 @@ super + F8
 super + l
 	slock
 
+# Reboot
+ctrl + alt + Delete
+	sudo reboot
+
+# Sleepytime
+ctrl + alt + s
+	sudo systemctl suspend
+
 #
 # bspwm hotkeys
 #
 
 # Quit
-ctrl + alt + Delete
+ctrl + alt + BackSpace
 	bspc quit
 
 # close and kill

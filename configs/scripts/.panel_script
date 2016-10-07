@@ -1,0 +1,4 @@
+#!/bin/bash
+
+FORMAT="FiraMono:size=9:antialias=true"
+PANEL_HEIGHT=""

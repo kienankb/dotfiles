@@ -26,3 +26,5 @@ bspc config focus_follows_pointer	true
 compton --config "/home/kienan/.config/compton.conf" -b
 
 panel &
+# Custom panel setup
+.panel_script &

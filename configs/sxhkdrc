@@ -39,7 +39,7 @@ ctrl + alt + s
 
 # Quit
 ctrl + alt + BackSpace
-	bspc quit
+	bspc quit; killall panel
 
 # close and kill
 super + {_,shift + }w
@@ -149,13 +149,3 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-# Mouse bindings for moving/resizing floating windows
-super + button{1-3}
-	bspc pointer -g {move,resize_side,resize_corner}
-
-super + @button{1-3}
-	bspc pointer -u
-
-super + !button{1-3}
-	bspc pointer -t %i %i

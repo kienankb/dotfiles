@@ -6,4 +6,5 @@ eval $(cat ~/.fehbg)
 # for fixing touchpad scroll direction
 synclient VertScrollDelta=-101
 synclient HorizScrollDelta=-101
+dropbox start
 exec bspwm

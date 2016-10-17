@@ -23,6 +23,7 @@ chmod +x ~/.bash_aliases
 cp configs/.ssh.config ~/.ssh/config
 cp configs/.asciinema.config ~/.config/asciinema/config
 cp configs/compton.conf ~/.config/
+cp configs/.nanorc ~/
 
 # all the scripts you could ever want
 mkdir -p ~/.scripts

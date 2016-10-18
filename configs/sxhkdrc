@@ -23,7 +23,7 @@ super + F8
 
 # Lock
 super + l
-	slock
+	lock.sh
 
 # Reboot
 ctrl + alt + Delete

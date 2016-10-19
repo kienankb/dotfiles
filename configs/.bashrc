@@ -114,4 +114,4 @@ fi
 
 export PEBBLESDK=~/projects/pebble-sdk/bin
 export PATH=$PATH:$PEBBLESDK:~/.scripts:/sbin
-export PS1="\[\033[38;5;208m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;141m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\][\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;81m\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]]\n\\$ \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;1m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;4m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\][\[$(tput sgr0)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]]\n\\$ \[$(tput sgr0)\]"

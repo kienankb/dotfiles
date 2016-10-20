@@ -23,5 +23,3 @@ compton --config "/home/kienan/.config/compton.conf" -b
 panel &
 # Custom panel setup
 # launch_panel.sh &
-
-redshift -l 42:73 &

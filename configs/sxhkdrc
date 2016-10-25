@@ -39,7 +39,7 @@ ctrl + alt + s
 
 # Quit
 ctrl + alt + BackSpace
-	bspc quit; killall panel
+	bspc quit; killall -r "bar_"
 
 # close and kill
 super + {_,shift + }w

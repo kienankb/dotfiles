@@ -20,6 +20,4 @@ bspc config focus_follows_pointer	true
 
 compton --config "/home/kienan/.config/compton.conf" -b
 
-panel &
-# Custom panel setup
-# launch_panel.sh &
+bar_launch.sh &

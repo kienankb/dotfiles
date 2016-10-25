@@ -90,7 +90,6 @@ cp configs/.nanorc ~/
 # all the scripts you could ever want
 mkdir -p ~/.scripts
 cp scripts/* ~/.scripts
-chmod +x ~/.scripts/panel ~/.scripts/panel_bar ~/.scripts/addkeys.sh
 
 # adding sources in order to install Chrome
 echo "Installing Chrome..."

@@ -21,6 +21,16 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
 	xbacklight -dec 10
 
+# Deal with volume
+XF86AudioMute
+	amixer set Master toggle
+
+XF86AudioRaiseVolume
+	amixer set Master 5+
+
+XF86AudioLowerVolume
+	amixer set Master 5-
+
 # Lock
 super + l
 	lock.sh

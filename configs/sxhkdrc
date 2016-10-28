@@ -43,6 +43,10 @@ ctrl + alt + Delete
 ctrl + alt + s
 	sudo systemctl suspend
 
+# Screenshot
+Print
+	scrot
+
 #
 # bspwm hotkeys
 #

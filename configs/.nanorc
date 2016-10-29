@@ -4,3 +4,4 @@ unset historylog
 set tabsize 4
 set autoindent
 set quickblank
+set nohelp

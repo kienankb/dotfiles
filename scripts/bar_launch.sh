@@ -24,14 +24,14 @@ elif [[ `cat /etc/hostname` == "tuesday" ]]; then
 	echo " " | \
 		lemonbar -p -d -B$MAIN_BG -g 1920x25+0+0 &
 	bspc subscribe | python ~/.scripts/bar_dm.py | \
-		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -g 145x20+5+5 &
+		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -g 150x20+0+0 &
 	bar_datetime.sh | \
-		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 200x25+150+5 &
+		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 150x25+1770+0 &
 	bar_disk.sh /dev/sdb1 | \
-		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 50x25+350+5 &
+		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 50x25+1720+0 &
 	bar_volume.sh | \
-		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 50x25+400+5 &
+		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 50x25+1670+0 &
 	bar_shortcuts.sh | \
-		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 50x25+395+0 -a 3 | bash &
+		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 75x25+150+0 -a 3 | bash &
 
 fi

@@ -17,7 +17,7 @@ if [[ `cat /etc/hostname` == "friday" ]]; then
 	bar_volume.sh | \
 		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 50x25+1325+0 &
 	bar_shortcuts.sh | \
-		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 75x25+75+0 -a 3 | bash &
+		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 100x25+75+0 -a 4 | bash &
 
 elif [[ `cat /etc/hostname` == "tuesday" ]]; then
 
@@ -32,6 +32,6 @@ elif [[ `cat /etc/hostname` == "tuesday" ]]; then
 	bar_volume.sh | \
 		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 50x25+1670+0 &
 	bar_shortcuts.sh | \
-		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 75x25+150+0 -a 3 | bash &
+		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "FiraMono:size=$TXT_SIZE:antialias=true" -f "icomoon:size=$ICO_SIZE" -g 100x25+150+0 -a 4 | bash &
 
 fi

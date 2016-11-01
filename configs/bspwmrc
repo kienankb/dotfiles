@@ -4,7 +4,7 @@ sxhkd &
 
 bspc monitor ^1 -n '' -d 1 2 3 4
 
-if [ `hostname` == "tuesday" ]
+if [ `cat /etc/hostname` == "tuesday" ]
 then
 	bspc monitor ^2 -n '' -d 5 6 7 8
 fi

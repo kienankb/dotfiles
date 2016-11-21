@@ -92,7 +92,7 @@ fi
 
 export PEBBLESDK=~/projects/pebble-sdk/bin
 export PATH=$PATH:$PEBBLESDK:~/.scripts:/sbin
-export PS1="\[\033[38;5;1m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;4m\]\[$(cat /etc/hostname)\]\[$(tput sgr0)\]\[\033[38;5;15m\][\[$(tput sgr0)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]]\n\\$ \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;1m\]┌\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;4m\]\[$(cat /etc/hostname)\]\[$(tput sgr0)\]\[\033[38;5;15m\][\[$(tput sgr0)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]]\n\[\033[38;5;1m\]└→ \[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
 
 # set up ssh-agent
 if [ ! -f /tmp/ssh-agent.sh ]

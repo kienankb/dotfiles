@@ -103,3 +103,6 @@ then
 else
 	source /tmp/ssh-agent.sh > /dev/null
 fi
+
+# make our terminals transparent and cool-looking
+compton-trans -w "$WINDOWID" 85

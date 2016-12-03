@@ -1,3 +1,8 @@
+## IMAGE SOURCE
+https://alpha.wallhaven.cc/wallpaper/399027
+
+## XRESOURCES
+
 ! special
 *.foreground:   #cbdca4
 *.background:   #000000
@@ -35,4 +40,5 @@
 *.color7:       #97aa77
 *.color15:      #c3dc9a
 
-xterm*faceName: SourceCodePro:size=9:antialias=true
+## BAR COLORS
+

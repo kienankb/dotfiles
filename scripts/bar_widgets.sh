@@ -3,7 +3,7 @@ while true; do
 	# volume
 	if [[ `volume | cut -d" " -f1` == "off"  ]]
 	then
-		VOL="%{F#ff7200}vol $(volume | cut -d' ' -f2)%%{F-}"
+		VOL="%{F$BAR_FG_ALT}vol $(volume | cut -d' ' -f2)%%{F-}"
 	else
 		VOL="%{F-}vol $(volume | cut -d' ' -f2)%"
 	fi
@@ -15,7 +15,7 @@ while true; do
 	if [[ $(battery | cut -d' ' -f1) == "Discharging" ]]; then
 		PWR="pwr $(battery | cut -d' ' -f2)%"
 	else
-		PWR="pwr $(battery | cut -d' ' -f2)%"
+		PWR="%{F$BAR_FG_ALT}pwr $(battery | cut -d' ' -f2)%%{F-}"
 	fi
 
 	# date/time

@@ -36,3 +36,4 @@
 *.color15:      #c3dc9a
 
 xterm*faceName: SourceCodePro:size=9:antialias=true
+xterm*forceBoxChars: true

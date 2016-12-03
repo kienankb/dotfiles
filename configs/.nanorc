@@ -1,3 +1,4 @@
+include /usr/local/share/nano/*
 set smarthome
 set smooth
 unset historylog

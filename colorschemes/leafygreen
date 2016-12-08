@@ -40,5 +40,12 @@ https://alpha.wallhaven.cc/wallpaper/399027
 *.color7:       #97aa77
 *.color15:      #c3dc9a
 
-## BAR COLORS
+## BAR VARS
 
+MAIN_BG=#CC333333
+BAR_BG=#00000000
+BAR_FG=#8AAA52
+BAR_FG_ALT=#DCB26B
+BAR_BD=#AAAAAA
+FONT_FACE=SourceCodePro
+FONT_SIZE=9

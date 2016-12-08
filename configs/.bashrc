@@ -90,7 +90,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PEBBLESDK=~/projects/pebble-sdk/bin
+export PATH=$PATH:/sbin:~/.scripts
 export PS1="\[\033[38;5;1m\]┌\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;4m\]\[$(cat /etc/hostname)\]\[$(tput sgr0)\]\[\033[38;5;15m\][\[$(tput sgr0)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]]\n\[\033[38;5;1m\]└ \[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
 
 # set up ssh-agent

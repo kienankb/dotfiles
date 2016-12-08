@@ -1,3 +1,5 @@
+## XRESOURCES
+
 ! special
 *.foreground:   #9aeaff
 *.background:   #000000
@@ -34,3 +36,13 @@
 ! white
 *.color7:       #c8cacc
 *.color15:      #edeff2
+
+## BAR VARS
+
+MAIN_BG=#CC333333
+BAR_BG=#00000000
+BAR_FG=#9AEAFF
+BAR_FG_ALT=#FF6D00
+BAR_BD=#AAAAAA
+FONT_FACE=SourceCodePro
+FONT_SIZE=9

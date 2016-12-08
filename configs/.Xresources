@@ -1,39 +1,39 @@
 ! special
-*.foreground:   #cbdca4
+*.foreground:   #9aeaff
 *.background:   #000000
-*.cursorColor:  #cbdca4
+*.cursorColor:  #9aeaff
 
 ! black
-*.color0:       #000000
-*.color8:       #000000
+*.color0:       #3d3d3d
+*.color8:       #4d4d4d
 
 ! red
-*.color1:       #aa8a53
-*.color9:       #dcb26b
+*.color1:       #c6f8f9
+*.color9:       #7396d1
 
 ! green
-*.color2:       #aa946e
-*.color10:      #dcbf8e
+*.color2:       #008ea1
+*.color10:      #00b3cb
 
 ! yellow
-*.color3:       #a6ab93
-*.color11:      #d6ddbd
+*.color3:       #2689cd
+*.color11:      #90cfd6
 
 ! blue
-*.color4:       #91aa62
-*.color12:      #bbdc7e
+*.color4:       #31658c
+*.color12:      #477ab3
 
 ! magenta
-*.color5:       #8aaa52
-*.color13:      #b2dc6a
+*.color5:       #58b8ba
+*.color13:      #4156b9
 
 ! cyan
-*.color6:       #97aa77
-*.color14:      #c3dc9a
+*.color6:       #8292b2
+*.color14:      #95a7cc
 
 ! white
-*.color7:       #97aa77
-*.color15:      #c3dc9a
+*.color7:       #c8cacc
+*.color15:      #edeff2
 
 xterm*faceName: SourceCodePro:size=9:antialias=true
 xterm*forceBoxChars: true

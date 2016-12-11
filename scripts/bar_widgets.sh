@@ -1,4 +1,7 @@
 #!/bin/bash
+
+. bar_vars.sh
+
 while true; do
 	# volume
 	if [[ `volume | cut -d" " -f1` == "off"  ]]

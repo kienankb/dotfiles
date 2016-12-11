@@ -4,11 +4,11 @@
 
 # Terminal emulator
 super + Return
-	uxterm -b 20
+	st
 
 # Launcher
 super + space
-	dmenu_run -fn "FiraMono:size=9:antialias=true" -l 20
+	interrobang
 
 # sxhkd reload
 super + Escape

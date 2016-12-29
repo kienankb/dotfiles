@@ -18,6 +18,6 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer	true
 
-compton --config "/home/kienan/.config/compton.conf" -b
+# compton --config "/home/kienan/.config/compton.conf" -b
 
 bar_launch.sh &

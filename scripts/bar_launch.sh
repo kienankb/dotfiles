@@ -4,10 +4,10 @@
 
 if [[ `cat /etc/hostname` == "friday" ]]; then
 
-	echo " " | \
-		lemonbar -p -d -B$MAIN_BG -g 1600x25+0+0 &
+	#echo " " | \
+	#	lemonbar -p -d -B$MAIN_BG -g 1600x25+0+0 &
 	bar_widgets.sh | \
-		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "$FONT_FACE:size=$FONT_SIZE:antialias=true" -g 1600x25+0+0 &
+		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "$FONT_FACE:size=$FONT_SIZE:antialias=true" -g 1525x25+75+0 &
 	bspc subscribe | python ~/.scripts/bar_dm.py $BAR_FG_ALT | \
 		lemonbar -p -d -B$BAR_BG -F$BAR_FG -f "$FONT_FACE:size=$FONT_SIZE:antialias=true" -g 75x25+0+0 &
 

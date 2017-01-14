@@ -75,9 +75,25 @@ esac
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+# OOOOH IT'S ALIAS TIME WOOOO
+
+alias upgrade="sudo apt-get update && sudo apt-get upgrade -y"
+alias ls="ls --color"
+alias ll="ls -lh --color"
+alias la="ls -lah --color"
+alias status="git status"
+alias add="git add -A"
+alias com="git commit"
+alias push="git push"
+alias pull="git pull"
+alias search="ps -ef | grep -i"
+alias x="startx"
+alias grep="grep --color=auto"
+alias night="redshift -O 3700"
+alias day="redshift -O 6500"
+alias net="sudo ifdown wlan0; sudo ifup wlan0"
+alias mc="mc -b"
+alias ezmount="sudo mount -t auto -o 'uid=kienan,gid=kienan'"
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

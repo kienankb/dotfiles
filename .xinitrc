@@ -1,4 +1,3 @@
-xrdb /home/kienan/.Xresources
 xsetroot -cursor_name left_ptr
 xrandr --output LVDS1 --auto --primary
 xrandr --output HDMI1 --auto --right-of LVDS1

@@ -1,0 +1,8 @@
+[user]
+	name = Kienan Knight-Boehm
+	email = kienan@kienankb.com
+[push]
+	default = simple
+[core]
+	editor = nano
+	quotepath = false

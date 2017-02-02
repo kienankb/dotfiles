@@ -7,8 +7,10 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
+overline = #749bdb
+
 [bar/main]
-monitor = ${env:MONITOR:DP-4}
+;monitor = ${env:MONITOR:DP-4}
 width = 100%
 height = 25
 offset-x = 0
@@ -31,7 +33,7 @@ module-margin-right = 1
 tray-position = right
 tray-padding = 1
 
-font-0 = Source Code Pro:size=9;0
+font-0 = Source Code Pro:size=12;0
 
 modules-left = bspwm volume mpd
 modules-center = date
@@ -47,7 +49,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = dsk %percentage_free%
+label-mounted = %mountpoint%: %percentage_free%%
 
 label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
@@ -76,7 +78,7 @@ label-empty-padding = 1
 [module/mpd]
 type = internal/mpd
 
-format-online = <icon-prev> <icon-seekb> <toggle> <icon-seekf> <icon-next>  <label-song>
+format-online = <icon-prev><icon-seekb><toggle><icon-seekf><icon-next> <label-song>
 
 label-song-maxlen = 25
 label-song-ellipsis = false
@@ -100,14 +102,14 @@ type = internal/cpu
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
 format-overline = #BD8BD6
-label = cpu: %percentage%
+label = CPU: %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
 format-overline = #BD8BD6
-label = mem: %percentage_used%
+label = RAM: %percentage_used%%
 
 [module/wlan]
 type = internal/network
@@ -118,7 +120,7 @@ format-connected = <label-connected>
 format-connected-overline = #BD8BD6
 format-disconnected-overline = #FF0000
 
-label-connected = net: %essid%
+label-connected = %essid%
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
@@ -200,25 +202,14 @@ format-discharging = pwr: <label-discharging>
 format-discharging-overline = #FF0000
 
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-overline = #BF8BD6
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
+format-full-overline = #00FF00
 
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format = tmp: <label>
+format = <label>
 format-overline = #BD8BD6
 format-warn = <ramp> <label-warn>
 format-warn-overline = ${self.format-overline}
@@ -226,8 +217,3 @@ format-warn-overline = ${self.format-overline}
 label = %temperature%
 label-warn = %temperature%
 label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}

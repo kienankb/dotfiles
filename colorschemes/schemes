@@ -55,28 +55,30 @@ rcursor:#555555
 
 encom
 
-color0:	#3d3d3d
-color1:	#c6f8f9
-color2:	#008ea1
-color3:	#2689cd
-color4:	#31658c
-color5:	#58b8ba
-color6:	#8292b2
-color7:	#c8cacc
+/* 8 normal colors */
+"#3d3d3d",	// color0
+"#c6f8f9",	// color1
+"#008ea1",	// color2
+"#2689cd",	// color3
+"#31658c",	// color4
+"#58b8ba",	// color5
+"#8292b2",	// color6
+"#c8cacc",	// color7
 
-color8:	#4d4d4d
-color9:	#7396d1
-color10:#00b3cb
-color11:#90cfd6
-color12:#477ab3
-color13:#4156b9
-color14:#95a7cc
-color15:#edeff2
+/* 8 bright colors */
+"#4d4d4d",	// color8
+"#7396d1",	// color9
+"#00b3cb",	// color10
+"#90cfd6",	// color11
+"#477ab3",	// color12
+"#4156b9",	// color13
+"#95a7cc",	// color14
+"#edeff2",	// color15
 
-bkgrnd:	#9aeaff
-frgrnd:	#000000
-cursor:	#cccccc
-rcursor:#555555
+"#9aeaff",	// foreground
+"#000000",	// background
+"#cccccc",	// cursor
+"#555555",	// reversecursor
 
 forest
 
@@ -102,3 +104,30 @@ bkgrnd:	#
 frgrnd:	#
 cursor:	#
 rcursor:#
+
+sedate
+
+/* 8 normal colors */
+"#4e4e4e",	// color0
+"#a9635d",	// color1
+"#468459",	// color2
+"#84763d",	// color3
+"#5879af",	// color4
+"#9c6594",	// color5
+"#008592",	// color6
+"#cfcfcf",	// color7
+
+/* 8 bright colors */
+"#777777",	// color8
+"#ffbbb2",	// color9
+"#9ddeaf",	// color10
+"#e0c391",	// color11
+"#b3d1ff",	// color12
+"#fabdf0",	// color13
+"#79e0ed",	// color14
+"#ffffff",	// color15
+
+"#a2a2a2",	// foreground
+"#292929",	// background
+"#ffffff",	// cursor
+"#000000",	// reversecursor

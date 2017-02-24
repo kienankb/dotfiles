@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo $0 $1
+
+cd /home/kienan/projects/tools/st
+cp config.$1.h config.h
+make && sudo make install
+cd /home/kienan/.config/polybar
+cp config.$1 config
+killall polybar
+polybar main &
+cp /home/kienan/.wallpapers/$1 /home/kienan/.wallpaper
+eval `cat /home/kienan/.config/.fehbg`
+if [ $1 == "encom" ]; then
+	bspc config bottom_padding 0
+	bspc config top_padding 0
+	bspc config -m ^1 top_padding 20
+	bspc config window_gap 0
+elif [ $1 == "sedated" ]; then
+	bspc config bottom_padding 0
+	bspc config top_padding 0
+	bspc config -m ^1 bottom_padding 30
+	bspc config window_gap 5
+fi

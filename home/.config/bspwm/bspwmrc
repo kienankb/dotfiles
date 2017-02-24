@@ -10,13 +10,11 @@ then
 	bspc monitor ^3 -n '' -d 9 0
 fi
 
-bspc config top_padding 0
-bspc config -m ^2 top_padding 25
 bspc config border_width 0
-bspc config window_gap 5
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer	true
 
-polybar main &
+compton &
+theme sedated

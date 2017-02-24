@@ -8,7 +8,7 @@ super + Return
 
 # Launcher
 super + space
-	interrobang
+	lighthouse | bash
 
 # sxhkd reload
 super + Escape
@@ -43,7 +43,7 @@ super + shift + m
 
 # Lock
 super + l
-	lock.sh
+	lock
 
 # Reboot
 ctrl + alt + Delete

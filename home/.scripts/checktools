@@ -1,0 +1,17 @@
+#!/bin/bash
+
+TOOLS=`ls ~/projects/tools/`
+GREEN="\033[1;32m"
+RED="\033[1;31m"
+NC="\033[0m"
+
+for tool in $TOOLS; do
+	cd ~/projects/tools/$tool
+	git fetch > /dev/null
+	output=`git status`
+	if [[ $output == *"up-to-date"* ]]; then
+		echo -e "${GREEN} up-to-date: ${tool}${NC}"
+	else
+		echo -e "${RED}out-of-date: ${tool}${NC}"
+	fi
+done

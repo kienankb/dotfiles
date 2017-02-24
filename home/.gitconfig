@@ -4,5 +4,5 @@
 [push]
 	default = simple
 [core]
-	editor = nano
+	editor = vim
 	quotepath = false

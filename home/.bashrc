@@ -95,6 +95,7 @@ alias net="sudo ifdown wlan0; sudo ifup wlan0"
 alias mc="mc -b"
 alias ezmount="sudo mount -t auto -o 'uid=kienan,gid=kienan'"
 alias vpn="sudo openvpn --config /etc/openvpn/client/US East.ovpn"
+alias chrome="google-chrome-stable -high-dpi-support=1 -force-device-scale-factor=1"
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

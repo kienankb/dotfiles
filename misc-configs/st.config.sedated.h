@@ -86,59 +86,33 @@ static unsigned int tabspaces = 4;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
-"#c5c1b4",
-"#e75c58",
-"#00a250",
-"#a08a00",
-"#208ffb",
-"#d160c4",
-"#00a4c1",
-"#3e424d",
+/* 8 normal colors */
+"#4e4e4e",	// color0
+"#a9635d",	// color1
+"#468459",	// color2
+"#84763d",	// color3
+"#5879af",	// color4
+"#9c6594",	// color5
+"#008592",	// color6
+"#cfcfcf",	// color7
 
-"#a1a6b2",
-"#b22b31",
-"#007427",
-"#715f00",
-"#0065ca",
-"#a03196",
-"#007693",
-"#282c36",
+	/* 8 bright colors */
+"#777777",	// color8
+"#ffbbb2",	// color9
+"#9ddeaf",	// color10
+"#e0c391",	// color11
+"#b3d1ff",	// color12
+"#fabdf0",	// color13
+"#79e0ed",	// color14
+"#ffffff",	// color15
 
-[255] = 0,
+	[255] = 0,
 
-"#6d727e",
-"#fef9ec",
-"#000000",
-"#ffffff",
-
-
-// /* 8 normal colors */
-// "#4e4e4e",	// color0
-// "#a9635d",	// color1
-// "#468459",	// color2
-// "#84763d",	// color3
-// "#5879af",	// color4
-// "#9c6594",	// color5
-// "#008592",	// color6
-// "#cfcfcf",	// color7
-
-// 	/* 8 bright colors */
-// "#777777",	// color8
-// "#ffbbb2",	// color9
-// "#9ddeaf",	// color10
-// "#e0c391",	// color11
-// "#b3d1ff",	// color12
-// "#fabdf0",	// color13
-// "#79e0ed",	// color14
-// "#ffffff",	// color15
-
-// 	[255] = 0,
-
-// 	/* more colors can be added after 255 to use with DefaultXX */
-// "#a2a2a2",	// foreground
-// "#292929",	// background
-// "#ffffff",	// cursor
-// "#000000",	// reversecursor
+	/* more colors can be added after 255 to use with DefaultXX */
+"#a2a2a2",	// foreground
+"#292929",	// background
+"#ffffff",	// cursor
+"#000000",	// reversecursor
 };
 
 /*

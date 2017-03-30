@@ -1,14 +1,13 @@
 [colors]
-background = #aa000000
+background = #cc000000
 background-alt = #222222
 foreground = #9aeaff
 foreground-alt = #007a99
 alert = #ffb52a
 overline = #007a99
 
-[bar/main]
+[bar/main-friday]
 monitor = ${env:MONITOR:LVDS1}
-;monitor = ${env:MONITOR:DP-4}
 width = 100%
 height = 20
 background = ${colors.background}
@@ -20,12 +19,65 @@ padding-left = 0
 padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
-font-0 = Hack:size=9;2
+font-0 = Source Code Pro:size=9;2
+font-1 = FontAwesome:size=9;2
 wm-restack = bspwm
-
-modules-left = bspwm volume mpd
+modules-left = bspwm volume mpd xwindow
 modules-center = date
 modules-right = filesystem memory cpu temperature vpncheck wlan battery
+
+[bar/main-tuesday-l]
+monitor = ${env:MONITOR:DP-0}
+width = 50%
+background = ${colors.background}
+foreground = ${colors.foreground}
+overline-size = 2
+underline-size = 2
+spacing = 1
+padding-left = 0
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 1
+font-0 = Source Code Pro:size=9;2
+font-1 = FontAwesome:size=9;2
+wm-restack = bspwm
+modules-center = date
+
+[bar/main-tuesday-c]
+monitor = ${env:MONITOR:DP-4}
+width = 100%
+background = ${colors.background}
+foreground = ${colors.foreground}
+overline-size = 2
+underline-size = 2
+spacing = 1
+padding-left = 0
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 1
+font-0 = Source Code Pro:size=9;2
+font-1 = FontAwesome:size=9;2
+wm-restack = bspwm
+modules-left = bspwm volume mpd xwindow
+modules-center = date
+modules-right = filesystem memory cpu temperature vpncheck eth battery
+
+[bar/main-tuesday-r]
+monitor = ${env:MONITOR:DP-2}
+width = 50%
+background = ${colors.background}
+foreground = ${colors.foreground}
+overline-size = 2
+underline-size = 2
+spacing = 1
+padding-left = 0
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 1
+font-0 = Source Code Pro:size=9;2
+font-1 = FontAwesome:size=9;2
+wm-restack = bspwm
+modules-center = date
 
 [module/vpncheck]
 type = custom/script
@@ -43,7 +95,7 @@ format-overline = ${colors.overline}
 type = internal/fs
 interval = 25
 mount-0 = /
-label-mounted = %mountpoint%: %percentage_free%%
+label-mounted =  %percentage_free%%
 label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 format-mounted-overline = ${colors.overline}
@@ -84,14 +136,14 @@ type = internal/cpu
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
 format-overline = ${colors.overline}
-label = CPU: %percentage%%
+label =  %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
 format-overline = ${colors.overline}
-label = RAM: %percentage_used%%
+label =  %percentage_used%%
 
 [module/wlan]
 type = internal/network
@@ -100,8 +152,8 @@ interval = 3.0
 format-connected = <label-connected>
 format-connected-overline = ${colors.overline}
 format-disconnected-overline = ${colors.alert}
-label-connected = "%essid%: %local_ip%"
-label-disconnected = "WLAN"
+label-connected = " %local_ip%"
+label-disconnected = " WLAN"
 
 [module/eth]
 type = internal/network
@@ -150,8 +202,9 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 95
-format-charging = PWR: <label-charging>
-format-discharging = pwr: <label-discharging>
+format-charging =  <label-charging>
+format-discharging =  <label-discharging>
+format-full =  <label-full>
 format-charging-overline = ${colors.overline}
 format-discharging-overline = ${colors.overline}
 format-full-overline = ${colors.overline}
@@ -164,6 +217,6 @@ format = <label>
 format-overline = ${colors.overline}
 format-warn = <label-warn>
 format-warn-overline = ${self.format-overline}
-label = %temperature%
-label-warn = %temperature%
+label =  %temperature%
+label-warn =  %temperature%
 label-warn-foreground = ${colors.alert}

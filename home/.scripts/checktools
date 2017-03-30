@@ -7,7 +7,7 @@ NC="\033[0m"
 
 for tool in $TOOLS; do
 	cd ~/projects/tools/$tool
-	git fetch | tee > /dev/null
+	git fetch 2>/dev/null
 	output=`git status`
 	if [[ $output == *"up-to-date"* ]]; then
 		echo -e "${GREEN} up-to-date: ${tool}${NC}"

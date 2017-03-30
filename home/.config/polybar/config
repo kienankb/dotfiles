@@ -28,7 +28,7 @@ modules-right = filesystem memory cpu temperature vpncheck wlan battery
 
 [bar/main-tuesday-l]
 monitor = ${env:MONITOR:DP-0}
-width = 50%
+width = 100%
 background = ${colors.background}
 foreground = ${colors.foreground}
 overline-size = 2
@@ -64,7 +64,7 @@ modules-right = filesystem memory cpu temperature vpncheck eth battery
 
 [bar/main-tuesday-r]
 monitor = ${env:MONITOR:DP-2}
-width = 50%
+width = 100%
 background = ${colors.background}
 foreground = ${colors.foreground}
 overline-size = 2

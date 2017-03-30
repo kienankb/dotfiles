@@ -77,7 +77,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 
 # OOOOH IT'S ALIAS TIME WOOOO
 
-alias upgrade="sudo apt-get update && sudo apt-get upgrade -y"
+alias upgrade="sudo apt update && sudo apt upgrade -y"
 alias ls="ls --color"
 alias ll="ls -lh --color"
 alias la="ls -lah --color"

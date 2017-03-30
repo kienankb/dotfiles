@@ -2,12 +2,12 @@
 
 sxhkd &
 
-if [ `hostname` == "friday" ]
+if [ $(hostname) = friday ]
 then
 	bspc monitor ^1 -n '' -d 1 2 3 4 5 6
 fi
 
-if [ `hostname` == "tuesday" ]
+if [ $(hostname) = tuesday ]
 then
 	bspc monitor ^1 -n '' -d 1 2 3
 	bspc monitor ^2 -n '' -d 4 5 6
@@ -25,12 +25,12 @@ bspc config focus_follows_pointer	true
 
 compton &
 
-if [ `hostname` == "friday" ]
+if [ $(hostname) = friday ]
 then
 	polybar main-friday &
 fi
 
-if [ `hostname` == "tuesday" ]
+if [ $(hostname) = tuesday ]
 then
 	polybar main-tuesday-l &
 	polybar main-tuesday-c &

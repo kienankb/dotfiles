@@ -1,15 +1,13 @@
 xsetroot -cursor_name left_ptr
 
 # Monitor setup on laptop
-if [ `hostname` == "friday" ]
-then
+if [ $(hostname) = friday ]; then
 	xrandr --output LVDS1 --auto --primary
 	xrandr --output HDMI1 --auto --right-of LVDS1
 fi
 
 # Monitor setup on desktop
-if [ `hostname` == "tuesday" ]
-then
+if [ $(hostname) = tuesday ]; then
 	xrandr --output DP-4 --auto --primary
 	xrandr --output DP-2 --auto --right-of DP-4
 	xrandr --output DP-0 --auto --left-of DP-4

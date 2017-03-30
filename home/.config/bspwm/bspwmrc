@@ -2,14 +2,22 @@
 
 sxhkd &
 
-bspc monitor ^1 -n '' -d 1 2 3 4
-
-if [ `cat /etc/hostname` == "tuesday" ]
+if [ `hostname` == "friday" ]
 then
-	bspc monitor ^2 -n '' -d 5 6
-	bspc monitor ^3 -n '' -d 7 8 9 0
+	bspc monitor ^1 -n '' -d 1 2 3 4 5 6
 fi
 
+if [ `hostname` == "tuesday" ]
+then
+	bspc monitor ^1 -n '' -d 1 2 3
+	bspc monitor ^2 -n '' -d 4 5 6
+	bspc monitor ^3 -n '' -d 7 8 9 
+fi
+
+bspc config bottom_padding 0
+bspc config top_padding 0
+bspc config -m primary top_padding 20
+bspc config window_gap 5
 bspc config border_width 0
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
@@ -17,4 +25,15 @@ bspc config gapless_monocle      true
 bspc config focus_follows_pointer	true
 
 compton &
-theme sedated
+
+if [ `hostname` == "friday" ]
+then
+	polybar main-friday &
+fi
+
+if [ `hostname` == "tuesday" ]
+then
+	polybar main-tuesday-l &
+	polybar main-tuesday-c &
+	polybar main-tuesday-r &
+fi

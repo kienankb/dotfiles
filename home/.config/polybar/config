@@ -157,7 +157,7 @@ label-disconnected = " WLAN"
 
 [module/eth]
 type = internal/network
-interface = eth0
+interface = enp0s31f6
 interval = 3.0
 format-connected = <label-connected>
 format-connected-overline = ${colors.overline}

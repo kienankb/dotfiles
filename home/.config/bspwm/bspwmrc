@@ -23,6 +23,8 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer	true
 
+bspc rule -a scratchpad sticky=on state=floating
+
 compton &
 
 if [ $(hostname) = friday ]

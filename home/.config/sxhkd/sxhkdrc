@@ -4,7 +4,7 @@
 
 # Terminal emulator
 super + Return
-	st -e tmux
+	st
 
 # Launcher
 super + space

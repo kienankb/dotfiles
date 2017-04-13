@@ -45,8 +45,7 @@ module-margin-right = 1
 font-0 = Source Code Pro:size=9;2
 font-1 = FontAwesome:size=9;2
 wm-restack = bspwm
-modules-center = xwindow
-modules-left = date
+modules-center = date
 
 [bar/main-tuesday-c]
 monitor = ${env:MONITOR:DP-4}
@@ -65,7 +64,7 @@ font-1 = FontAwesome:size=9;2
 wm-restack = bspwm
 modules-left = bspwm volume mpd
 modules-center = xwindow
-modules-right = filesystem memory cpu temperature vpncheck eth battery date
+modules-right = filesystem memory cpu temperature vpncheck eth date
 
 [bar/main-tuesday-r]
 monitor = ${env:MONITOR:DP-2}
@@ -82,8 +81,7 @@ module-margin-right = 1
 font-0 = Source Code Pro:size=9;2
 font-1 = FontAwesome:size=9;2
 wm-restack = bspwm
-modules-center = xwindow
-modules-right = date
+modules-center = date
 
 [module/vpncheck]
 type = custom/script
@@ -127,13 +125,13 @@ type = internal/mpd
 format-online = <icon-prev><toggle><icon-next> <label-song>
 label-song-maxlen = 25
 label-song-ellipsis = false
-icon-prev = "<"
-icon-seekb = <<
-icon-stop = []
-icon-play = "|>|"
-icon-pause = "|#|"
-icon-next = ">"
-icon-seekf = >>
+icon-prev = ""
+icon-seekb = ""
+icon-stop = ""
+icon-play = ""
+icon-pause = ""
+icon-next = ""
+icon-seekf = ""
 toggle-on-foreground = ${colors.foreground}
 toggle-off-foreground = ${colors.foreground-alt}
 

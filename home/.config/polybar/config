@@ -1,10 +1,14 @@
 [colors]
 background = #cc000000
 background-alt = #222222
-foreground = #9aeaff
-foreground-alt = #007a99
+;foreground = #9aeaff
+foreground = #cccccc
+foreground-icon = #9ddeaf
+;foreground-alt = #007a99
+foreground-alt = #468459
 alert = #ffb52a
-overline = #007a99
+;overline = #007a99
+overline = #468459
 
 [bar/main-friday]
 monitor = ${env:MONITOR:LVDS1}
@@ -22,9 +26,9 @@ module-margin-right = 1
 font-0 = Source Code Pro:size=9;2
 font-1 = FontAwesome:size=9;2
 wm-restack = bspwm
-modules-left = bspwm volume mpd xwindow
-modules-center = date
-modules-right = filesystem memory cpu temperature vpncheck wlan battery
+modules-left = bspwm volume mpd
+modules-center = xwindow
+modules-right = filesystem memory cpu temperature vpncheck wlan battery date
 
 [bar/main-tuesday-l]
 monitor = ${env:MONITOR:DP-0}
@@ -41,7 +45,8 @@ module-margin-right = 1
 font-0 = Source Code Pro:size=9;2
 font-1 = FontAwesome:size=9;2
 wm-restack = bspwm
-modules-center = date
+modules-center = xwindow
+modules-left = date
 
 [bar/main-tuesday-c]
 monitor = ${env:MONITOR:DP-4}
@@ -58,9 +63,9 @@ module-margin-right = 1
 font-0 = Source Code Pro:size=9;2
 font-1 = FontAwesome:size=9;2
 wm-restack = bspwm
-modules-left = bspwm volume mpd xwindow
-modules-center = date
-modules-right = filesystem memory cpu temperature vpncheck eth battery
+modules-left = bspwm volume mpd
+modules-center = xwindow
+modules-right = filesystem memory cpu temperature vpncheck eth battery date
 
 [bar/main-tuesday-r]
 monitor = ${env:MONITOR:DP-2}
@@ -77,7 +82,8 @@ module-margin-right = 1
 font-0 = Source Code Pro:size=9;2
 font-1 = FontAwesome:size=9;2
 wm-restack = bspwm
-modules-center = date
+modules-center = xwindow
+modules-right = date
 
 [module/vpncheck]
 type = custom/script
@@ -96,7 +102,7 @@ type = internal/fs
 interval = 25
 mount-0 = /
 label-mounted =  %percentage_free%%
-label-unmounted = %mountpoint%: not mounted
+label-unmounted = %{F#FF0000}%{F-} %mountpoint%
 label-unmounted-foreground = ${colors.foreground-alt}
 format-mounted-overline = ${colors.overline}
 
@@ -118,15 +124,15 @@ label-empty-padding = 1
 
 [module/mpd]
 type = internal/mpd
-format-online = <icon-prev><icon-seekb><toggle><icon-seekf><icon-next> <label-song>
+format-online = <icon-prev><toggle><icon-next> <label-song>
 label-song-maxlen = 25
 label-song-ellipsis = false
-icon-prev = <
+icon-prev = "<"
 icon-seekb = <<
 icon-stop = []
-icon-play = [>]
-icon-pause = [#]
-icon-next = >
+icon-play = "|>|"
+icon-pause = "|#|"
+icon-next = ">"
 icon-seekf = >>
 toggle-on-foreground = ${colors.foreground}
 toggle-off-foreground = ${colors.foreground-alt}
@@ -152,8 +158,8 @@ interval = 3.0
 format-connected = <label-connected>
 format-connected-overline = ${colors.overline}
 format-disconnected-overline = ${colors.alert}
-label-connected = " %local_ip%"
-label-disconnected = " WLAN"
+label-connected =  %local_ip%
+label-disconnected =  WLAN
 
 [module/eth]
 type = internal/network

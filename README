@@ -1,8 +1,1 @@
-# README
-
-### Installation:
-
-1. `su` yourself up and `apt-get install git sudo make`.
-2. Run `visudo` and add `*username* ALL=(ALL) NOPASSWD: ALL`; probably not a good idea, but we're going for ease of use here, trust me.  Drop out of the root shell.
-3. Clone this repo somewhere and enter the repo folder.
-4. `./install.sh`
+Run `stow -t ~/ home/` from the repo root after deleting everything needed from ~/ and ~/.config/.

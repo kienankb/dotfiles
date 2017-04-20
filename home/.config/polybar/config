@@ -31,7 +31,7 @@ modules-center = xwindow
 modules-right = filesystem memory cpu temperature vpncheck wlan battery date
 
 [bar/main-tuesday-l]
-monitor = ${env:MONITOR:DP-0}
+monitor = DP-0
 width = 100%
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -45,10 +45,11 @@ module-margin-right = 1
 font-0 = Source Code Pro:size=9;2
 font-1 = FontAwesome:size=9;2
 wm-restack = bspwm
+modules-left = bspwm
 modules-center = date
 
 [bar/main-tuesday-c]
-monitor = ${env:MONITOR:DP-4}
+monitor = DP-4
 width = 100%
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -67,7 +68,7 @@ modules-center = xwindow
 modules-right = filesystem memory cpu temperature vpncheck eth date
 
 [bar/main-tuesday-r]
-monitor = ${env:MONITOR:DP-2}
+monitor = DP-2
 width = 100%
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -81,6 +82,7 @@ module-margin-right = 1
 font-0 = Source Code Pro:size=9;2
 font-1 = FontAwesome:size=9;2
 wm-restack = bspwm
+modules-left = bspwm
 modules-center = date
 
 [module/vpncheck]
@@ -106,6 +108,7 @@ format-mounted-overline = ${colors.overline}
 
 [module/bspwm]
 type = internal/bspwm
+pin-workspaces = true
 ws-icon-default = x
 label-focused = %index%
 label-focused-background = ${colors.background-alt}

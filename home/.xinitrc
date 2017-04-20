@@ -1,4 +1,5 @@
 xsetroot -cursor_name left_ptr
+xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_ptr 16
 
 # Monitor setup on laptop
 if [ $(hostname) = friday ]; then
@@ -21,5 +22,4 @@ synclient VertScrollDelta=-101
 synclient HorizScrollDelta=-101
 
 # Start programs that nee dit
-dropbox start
 exec bspwm

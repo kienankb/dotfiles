@@ -29,6 +29,7 @@ wm-restack = bspwm
 modules-left = bspwm volume mpd
 modules-center = xwindow
 modules-right = filesystem memory cpu temperature vpncheck wlan battery date
+tray-position = right
 
 [bar/main-tuesday-l]
 monitor = DP-0
@@ -66,6 +67,7 @@ wm-restack = bspwm
 modules-left = bspwm volume mpd
 modules-center = xwindow
 modules-right = filesystem memory cpu temperature vpncheck eth date
+tray-position = right
 
 [bar/main-tuesday-r]
 monitor = DP-2

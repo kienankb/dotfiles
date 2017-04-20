@@ -95,6 +95,8 @@ alias net="sudo ifdown wlan0; sudo ifup wlan0"
 alias mc="mc -b"
 alias ezmount="sudo mount -t auto -o 'uid=kienan,gid=kienan'"
 
+eval $(thefuck --alias)
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).

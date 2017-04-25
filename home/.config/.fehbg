@@ -1,1 +1,1 @@
-feh --no-fehbg --bg-fill '/home/kienan/.config/wallpaper'
+feh --randomize --no-fehbg --bg-fill ~/Dropbox/Photos/wallpapers/morbid-oil/*

@@ -120,3 +120,6 @@ then
 else
 	source /tmp/ssh-agent.sh > /dev/null
 fi
+
+export WORKON_HOME=$HOME/projects/.virtualenvs
+source /usr/local/bin/virtualenvwrapper_lazy.sh

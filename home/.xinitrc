@@ -10,8 +10,6 @@ fi
 # Monitor setup on desktop
 if [ $(hostname) = tuesday ]; then
 	xrandr --output DP-4 --auto --primary
-	xrandr --output DP-2 --auto --right-of DP-4
-	xrandr --output DP-0 --auto --left-of DP-4
 fi
 
 # Set the wallpaper

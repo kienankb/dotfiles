@@ -8,6 +8,7 @@ set laststatus=2
 
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/chrisbra/Colorizer.git'
+Plug 'vitalk/vim-simple-todo'
 call plug#end()
 
 python from powerline.vim import setup as powerline_setup

@@ -42,3 +42,4 @@ fi
 compton &
 dropbox start
 run_keybase
+telegram &

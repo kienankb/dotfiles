@@ -40,6 +40,7 @@ then
 fi
 
 compton &
-dropbox start
-run_keybase
+redshift -l geoclue2 &
+dropbox start &
+run_keybase &
 telegram &

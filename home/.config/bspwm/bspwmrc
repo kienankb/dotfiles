@@ -12,6 +12,16 @@ then
 	bspc monitor DP-4 -d 1 2 3 4 5 6
 fi
 
+if [ $(hostname) = friday ]
+then
+	polybar main-friday &
+fi
+
+if [ $(hostname) = tuesday ]
+then
+	polybar main-tuesday-c &
+fi
+
 bspc config bottom_padding			0
 bspc config top_padding				20
 bspc config window_gap				5
@@ -28,16 +38,6 @@ bspc config borderless_monocle		false
 
 bspc rule -a scratchpad sticky=on state=floating
 bspc rule -a Keybase state=floating
-
-if [ $(hostname) = friday ]
-then
-	polybar main-friday &
-fi
-
-if [ $(hostname) = tuesday ]
-then
-	polybar main-tuesday-c &
-fi
 
 compton &
 redshift -l geoclue2 &

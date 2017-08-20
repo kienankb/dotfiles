@@ -12,7 +12,7 @@ super + space
 
 # Scratchpad
 alt + s
-	tdrop -a -m "st -c scratchpad"
+	tdrop -a -f "-c scratchpad" -m st
 
 # sxhkd reload
 super + Escape

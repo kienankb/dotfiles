@@ -8,7 +8,7 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 10,
+	"font_size": 9,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -23,12 +23,11 @@
 	"original_color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"overlay_scroll_bars": "enabled",
 	"theme": "Boxy Tomorrow.sublime-theme",
-	"theme_accent_mono": true,
+	"theme_accent_tangerine": true,
 	"theme_bar": true,
-	"theme_bar_colored": true,
 	"theme_sidebar_disclosure": true,
 	"theme_sidebar_heading_bold": true,
 	"theme_sidebar_indent_xs": true,
 	"theme_tab_arrows_hidden": true,
-	"theme_tab_selected_filled": true
+	"theme_tab_selected_underlined": true
 }

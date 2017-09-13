@@ -43,4 +43,4 @@ compton &
 redshift -l geoclue2 &
 dropbox start &
 run_keybase &
-telegram-desktop &
+# telegram-desktop &

@@ -18,5 +18,5 @@ eval $(cat ~/.config/.fehbg)
 synclient VertScrollDelta=-101
 synclient HorizScrollDelta=-101
 
-# Start programs that nee dit
+# Start programs that need it
 exec bspwm

@@ -68,7 +68,10 @@ ctrl + alt + s
 
 # Screenshot
 Print
-	scrot
+	maim -u ~/$(date +"%Y%m%d-%H%M%S").png
+
+super + Print
+	maim -su ~/$(date +"%Y%m%d-%H%M%S").png
 
 #
 # bspwm hotkeys

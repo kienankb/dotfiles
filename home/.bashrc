@@ -78,9 +78,9 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # OOOOH IT'S ALIAS TIME WOOOO
 
 alias upgrade="sudo apt update && sudo apt upgrade -y"
-alias ls="ls --color"
-alias ll="ls -lh --color"
-alias la="ls -lah --color"
+alias ls="exa"
+alias ll="exa -lh"
+alias la="exa -lah"
 alias status="git status"
 alias add="git add -A"
 alias com="git commit"
@@ -108,7 +108,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$PATH:/sbin:~/.scripts
+export PATH=$PATH:/sbin:~/.scripts:~/.cargo/bin
 export PS1="\[\033[38;5;1m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;4m\]\[$(hostname)\]\[$(tput sgr0)\]\[\033[38;5;15m\][\[$(tput sgr0)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]]\n\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
 
 # set up ssh-agent

@@ -79,8 +79,8 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 
 alias upgrade="sudo apt update && sudo apt upgrade -y"
 alias ls="exa"
-alias ll="exa -lh"
-alias la="exa -lah"
+alias ll="exa -l"
+alias la="exa -la"
 alias status="git status"
 alias add="git add -A"
 alias com="git commit"

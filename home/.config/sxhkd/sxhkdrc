@@ -8,7 +8,8 @@ super + Return
 
 # Launcher
 super + space
-	lighthouse | bash
+#	lighthouse | bash
+	dmenu_run -b
 
 # Scratchpad
 alt + s

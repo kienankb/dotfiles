@@ -94,7 +94,7 @@ alias net="sudo ifdown wlan0; sudo ifup wlan0"
 alias mc="mc -b"
 alias ezmount="sudo mount -t auto -o 'users,uid=1000,gid=1000,fmask=0113,dmask=0002'"
 alias syncipod="rsync -rvc ~/media/music/ /mnt/ipod/music"
-alias mediamount="tuesday:media/ media/"
+alias mediamount="sshfs tuesday:media/ media/"
 
 eval $(thefuck --alias)
 

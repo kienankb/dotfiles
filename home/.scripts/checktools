@@ -9,7 +9,7 @@ for tool in $TOOLS; do
 	cd ~/projects/tools/$tool
 	git fetch 2>/dev/null
 	output=`git status`
-	if [[ $output == *"up-to-date"* ]]; then
+	if [[ $output == *"up to date"* ]]; then
 		echo -e "${GREEN} up-to-date: ${tool}${NC}"
 	else
 		echo -e "${RED}out-of-date: ${tool}${NC}"

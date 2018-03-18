@@ -1,12 +1,13 @@
 #!/bin/bash
 
 if [[ $1 = "-h" ]]; then
-	echo "Usage: postpacstrap.sh <hostname> <disk>"
+	echo "Usage: postpacstrap.sh <hostname> <disk> <user>"
 	exit
 fi
 
 HOSTNAME=$1
 DISK=$2
+USER=$3
 
 if [[ $(whoami) != "root" ]]; then
 	echo "This should be run as root."
@@ -20,13 +21,13 @@ sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo $HOSTNAME > /etc/hostname
-echo "127.0.0.1\tlocalhost" > /etc/hosts
-echo "::1\tlocalhost" >> /etc/hosts
-echo "127.0.1.1\t$HOSTNAME.localdomain\t$HOSTNAME" >> /etc/hosts
+echo "127.0.0.1	localhost" > /etc/hosts
+echo "::1	localhost" >> /etc/hosts
+echo "127.0.1.1	$HOSTNAME.localdomain	$HOSTNAME" >> /etc/hosts
 
 read -p "Set up wireless networking? (y/n): " -r
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-	pacman -S iw wpa_supplicant
+	pacman -S --noconfirm iw wpa_supplicant
 	echo "ctrl_interface=/run/wpa_supplicant" > /etc/wpa_supplicant/wpa_supplicant.conf
 	echo "ctrl_interface_group=wheel" >> /etc/wpa_supplicant/wpa_supplicant.conf
 	echo "update_config=1" >> /etc/wpa_supplicant/wpa_supplicant.conf
@@ -39,12 +40,17 @@ systemctl enable dhcpcd
 echo "Set your new root password:"
 passwd
 echo "Setting up bootloader..."
-pacman -S grub efibootmgr os-prober
+pacman -S --noconfirm grub efibootmgr os-prober
 grub-install $DISK
 grub-mkconfig -o /boot/grub/grub.cfg
 read -p "Running an Intel CPU? (y/n): " -r
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-	pacman -S intel-ucode
+	pacman -S --noconfirm intel-ucode
 fi
 
-echo "Done! Exit the chroot, reboot into the new system, and run bootstrap.sh."
+echo "Setting up $USER as initial non-root user."
+useradd -m -s /bin/bash $USER
+passwd $USER
+pacman -S --noconfirm git
+
+echo "Done! Exit the chroot, reboot into the new system, clone dotfiles, and run bootstrap.sh."

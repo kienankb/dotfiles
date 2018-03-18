@@ -5,8 +5,8 @@ if [[ $1 = "-h" ]]; then
 	exit
 fi
 
-$HOSTNAME = $1
-$DISK = $2
+HOSTNAME=$1
+DISK=$2
 
 if [[ $(whoami) != "root" ]]; then
 	echo "This should be run as root."
@@ -36,6 +36,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 fi
 systemctl enable dhcpcd
 
+echo "Set your new root password:"
 passwd
 echo "Setting up bootloader..."
 pacman -S grub efibootmgr os-prober

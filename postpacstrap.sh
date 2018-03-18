@@ -8,7 +8,7 @@ fi
 $HOSTNAME = $1
 $DISK = $2
 
-if [ $(whoami) != "root" ]; then
+if [[ $(whoami) != "root" ]]; then
 	echo "This should be run as root."
 	exit
 fi
@@ -16,7 +16,7 @@ fi
 echo "Generating locales, creating hostname files..."
 ln -sf /usr/share/zoneinfo/US/Pacific /etc/localtime
 hwclock --systohc
-sed -i s/\#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g /etc/locale.gen
+sed -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo $HOSTNAME > /etc/hostname

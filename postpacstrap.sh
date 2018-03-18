@@ -12,10 +12,6 @@ if [ $(whoami) != "root" ]; then
 	echo "This should be run as root."
 	exit
 fi
-read -p "Are you chrooted into your new install? (y/n): " -r
-if [[ $REPLY =~ ^[Nn]$ ]]; then
-	exit
-fi
 
 echo "Generating locales, creating hostname files..."
 ln -sf /usr/share/zoneinfo/US/Pacific /etc/localtime
@@ -37,10 +33,11 @@ if [[ $REPLY =~[Yy]$ ]]; then
 	echo "country=US" >> /etc/wpa_supplicant/wpa_supplicant.conf
 	echo "ap_scan=1" >> /etc/wpa_supplicant/wpa_supplicant.conf
 	ln -s /usr/share/dhcpcd/hooks/10-wpa_supplicant /usr/lib/dhcpcd/dhcpcd-hooks/
-	systemctl enable dhcpcd
 fi
+systemctl enable dhcpcd
 
 passwd
+echo "Setting up bootloader..."
 pacman -S grub efibootmgr os-prober
 grub-install $DISK
 grub-mkconfig -o /boot/grub/grub.cfg

@@ -41,7 +41,7 @@ echo "Set your new root password:"
 passwd
 echo "Setting up bootloader..."
 pacman -S --noconfirm grub efibootmgr os-prober
-grub-install $DISK
+grub-install --efi-directory=/boot/efi --bootloader=arch_grub
 grub-mkconfig -o /boot/grub/grub.cfg
 read -p "Running an Intel CPU? (y/n): " -r
 if [[ $REPLY =~ ^[Yy]$ ]]; then

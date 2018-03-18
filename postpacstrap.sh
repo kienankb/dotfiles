@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $1 = "-h" ]; then
+if [[ $1 = "-h" ]]; then
 	echo "Usage: postpacstrap.sh <hostname> <disk>"
 	exit
 fi

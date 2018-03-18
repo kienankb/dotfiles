@@ -1,13 +1,12 @@
 #!/bin/bash
 
-if [[ $1 = "-h" ]]; then
-	echo "Usage: postpacstrap.sh <hostname> <disk> <user>"
+if [[ "$#" -ne 2 || $1 = "-h" ]]; then
+	echo "Usage: postpacstrap.sh <hostname> <user>"
 	exit
 fi
 
 HOSTNAME=$1
-DISK=$2
-USER=$3
+USER=$2
 
 if [[ $(whoami) != "root" ]]; then
 	echo "This should be run as root."

@@ -52,4 +52,7 @@ useradd -m -s /bin/bash $USER
 passwd $USER
 pacman -S --noconfirm git openssh
 
-echo "Done! Exit the chroot, reboot into the new system, clone dotfiles, and run bootstrap.sh."
+echo "Done! Things you need to do now:"
+echo "1. add yourself to sudo"
+echo "2. reboot"
+echo "3. you might need to run grub-install again, dunno"

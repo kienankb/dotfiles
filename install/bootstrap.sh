@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo pacman -S - < ./packages
-stow -t ~/ ../home/
+sudo pacman -S - < ./install/packages
+stow -t ~/ home/

@@ -1,1 +1,5 @@
-Run `stow -t ~/ home/` from the repo root after deleting everything needed from ~/ and ~/.config/.
+== HOW TO INSTALL DOTFILES
+1. wget `install/postpacstrap.sh` and run it to deal with fun arch setup
+2. clone this repo
+3. run install/bootstrap.sh
+4. STEP 4 YA DONE

@@ -50,6 +50,6 @@ fi
 echo "Setting up $USER as initial non-root user."
 useradd -m -s /bin/bash $USER
 passwd $USER
-pacman -S --noconfirm git
+pacman -S --noconfirm git openssh
 
 echo "Done! Exit the chroot, reboot into the new system, clone dotfiles, and run bootstrap.sh."

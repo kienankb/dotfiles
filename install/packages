@@ -2,6 +2,7 @@ alsa-utils
 asciinema
 bspwm
 chromium
+cmake
 compton
 dmenu
 feh
@@ -24,6 +25,7 @@ ttf-hack
 tmux
 vim
 wget
+wireless_tools
 xf86-input-synaptics
 xorg-xbacklight
 xorg-server

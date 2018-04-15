@@ -6,6 +6,7 @@ chromium
 cmake
 compton
 dmenu
+exa
 feh
 flatpak
 htop
@@ -19,6 +20,7 @@ mpv
 ncmpcpp
 neofetch
 openssh
+pavucontrol
 perl-image-exiftool
 pulseaudio
 python-pip

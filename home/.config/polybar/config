@@ -5,13 +5,34 @@ background-alt = #222222
 foreground = #cccccc
 foreground-icon = #9ddeaf
 ;foreground-alt = #007a99
-foreground-alt = #468459
+foreground-alt = #2baf53
 alert = #ffb52a
 ;overline = #007a99
 overline = #468459
 
-[bar/main-friday]
-monitor = ${env:MONITOR:LVDS1}
+[bar/miranda]
+monitor = ${env:MONITOR:eDP1}
+width = 100%
+height = 20
+background = ${colors.background}
+foreground = ${colors.foreground}
+overline-size = 2
+underline-size = 2
+spacing = 1
+bottom = 1
+padding-left = 0
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 1
+font-0 = Hack:size=9;2
+wm-restack = bspwm
+modules-left = bspwm volume mpd
+modules-center = xwindow
+modules-right = filesystem memory cpu temperature vpncheck wlan battery date
+tray-position = right
+
+[bar/ophelia]
+monitor = ${env:MONITOR:DP-4}
 width = 100%
 height = 20
 background = ${colors.background}
@@ -23,69 +44,12 @@ padding-left = 0
 padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
-font-0 = Source Code Pro:size=9;2
-font-1 = FontAwesome:size=9;2
-wm-restack = bspwm
-modules-left = bspwm volume mpd
-modules-center = xwindow
-modules-right = filesystem memory cpu temperature vpncheck wlan battery date
-tray-position = right
-
-[bar/main-tuesday-l]
-monitor = DP-0
-width = 100%
-background = ${colors.background}
-foreground = ${colors.foreground}
-overline-size = 2
-underline-size = 2
-spacing = 1
-padding-left = 0
-padding-right = 1
-module-margin-left = 1
-module-margin-right = 1
-font-0 = Source Code Pro:size=9;2
-font-1 = FontAwesome:size=9;2
-wm-restack = bspwm
-modules-left = bspwm
-modules-center = date
-
-[bar/main-tuesday-c]
-monitor = DP-4
-width = 100%
-background = ${colors.background}
-foreground = ${colors.foreground}
-overline-size = 2
-underline-size = 2
-spacing = 1
-padding-left = 0
-padding-right = 1
-module-margin-left = 1
-module-margin-right = 1
-font-0 = Source Code Pro:size=9;2
-font-1 = FontAwesome:size=9;2
+font-0 = Hack:size=9;2
 wm-restack = bspwm
 modules-left = bspwm volume mpd
 modules-center = xwindow
 modules-right = filesystem memory cpu temperature vpncheck eth date
 tray-position = right
-
-[bar/main-tuesday-r]
-monitor = DP-2
-width = 100%
-background = ${colors.background}
-foreground = ${colors.foreground}
-overline-size = 2
-underline-size = 2
-spacing = 1
-padding-left = 0
-padding-right = 1
-module-margin-left = 1
-module-margin-right = 1
-font-0 = Source Code Pro:size=9;2
-font-1 = FontAwesome:size=9;2
-wm-restack = bspwm
-modules-left = bspwm
-modules-center = date
 
 [module/vpncheck]
 type = custom/script
@@ -103,8 +67,8 @@ format-overline = ${colors.overline}
 type = internal/fs
 interval = 25
 mount-0 = /
-label-mounted =  %percentage_free%%
-label-unmounted =  %mountpoint%
+label-mounted = %percentage_free%%
+label-unmounted = %mountpoint%
 label-unmounted-foreground = ${colors.foreground-alt}
 format-mounted-overline = ${colors.overline}
 
@@ -130,13 +94,13 @@ type = internal/mpd
 format-online = <icon-prev><toggle><icon-next> <label-song>
 label-song-maxlen = 25
 label-song-ellipsis = false
-icon-prev = 
-icon-seekb = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-icon-seekf = 
+icon-prev = <
+icon-seekb = <<
+icon-stop = X
+icon-play = O
+icon-pause = #
+icon-next = >
+icon-seekf = >>
 toggle-on-foreground = ${colors.foreground}
 toggle-off-foreground = ${colors.foreground-alt}
 
@@ -145,24 +109,24 @@ type = internal/cpu
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
 format-overline = ${colors.overline}
-label =  %percentage%%
+label = %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
 format-overline = ${colors.overline}
-label =  %percentage_used%%
+label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlan0
+interface = wlp2s0
 interval = 3.0
 format-connected = <label-connected>
 format-connected-overline = ${colors.overline}
 format-disconnected-overline = ${colors.alert}
-label-connected =  %local_ip%
-label-disconnected =  WLAN
+label-connected = %local_ip%
+label-disconnected = WLAN
 
 [module/eth]
 type = internal/network
@@ -183,14 +147,14 @@ format-overline = ${colors.overline}
 label = %date% %time%
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 format-volume = <label-volume><bar-volume>
 label-volume = VOL:
 label-volume-foreground = ${colors.foreground}
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = "     muted     "
 bar-volume-width = 10
-bar-volume-foreground = ${colors.foreground}
+bar-volume-foreground = ${colors.foreground-alt}
 ;bar-volume-foreground-0 = #55aa55
 ;bar-volume-foreground-1 = #55aa55
 ;bar-volume-foreground-2 = #55aa55
@@ -202,19 +166,19 @@ bar-volume-foreground = ${colors.foreground}
 ;bar-volume-foreground-8 = #ff5555
 ;bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-foreground = ${colors.foreground}
-bar-volume-fill = #
+bar-volume-indicator-foreground = ${colors.foreground-alt}
+bar-volume-fill = ─
 bar-volume-empty = ─
-bar-volume-empty-foreground = ${colors.foreground-alt}
+bar-volume-empty-foreground = ${colors.foreground}
 
 [module/battery]
 type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 95
-format-charging =  <label-charging>
-format-discharging =  <label-discharging>
-format-full =  <label-full>
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+format-full = <label-full>
 format-charging-overline = ${colors.overline}
 format-discharging-overline = ${colors.overline}
 format-full-overline = ${colors.overline}
@@ -227,6 +191,6 @@ format = <label>
 format-overline = ${colors.overline}
 format-warn = <label-warn>
 format-warn-overline = ${self.format-overline}
-label =  %temperature%
-label-warn =  %temperature%
+label = %temperature-c%
+label-warn = %temperature-c%
 label-warn-foreground = ${colors.alert}

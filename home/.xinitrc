@@ -14,12 +14,14 @@ fi
 eval $(cat ~/.config/.fehbg)
 
 # For fixing touchpad scroll direction
-synclient VertScrollDelta=-250
-synclient HorizScrollDelta=-250
-synclient TapButton1=1
-synclient TapButton2=3
-synclient TapButton3=2
-synclient PalmDetect=1
+if [ $(hostname) = miranda ]; then
+	synclient VertScrollDelta=-250
+	synclient HorizScrollDelta=-250
+	synclient TapButton1=1
+	synclient TapButton2=3
+	synclient TapButton3=2
+	synclient PalmDetect=1
+fi
 
 # Start programs that need it
 exec bspwm

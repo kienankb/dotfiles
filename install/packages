@@ -1,3 +1,4 @@
+acpi
 alsa-utils
 asciinema
 bspwm
@@ -6,8 +7,11 @@ cmake
 compton
 dmenu
 feh
+flatpak
 htop
 i3lock
+imagemagick
+libu2f-host
 maim
 mc
 mpd
@@ -15,7 +19,7 @@ mpv
 ncmpcpp
 neofetch
 openssh
-powerline
+perl-image-exiftool
 pulseaudio
 python-pip
 redshift
@@ -23,6 +27,7 @@ stow
 sxhkd
 ttf-hack
 tmux
+unzip
 vim
 wget
 wireless_tools
@@ -30,6 +35,8 @@ xf86-input-synaptics
 xorg-xbacklight
 xorg-server
 xorg-xinit
+xorg-xinput
+xorg-xprop
 xorg-xrandr
 xorg-xsetroot
 xterm

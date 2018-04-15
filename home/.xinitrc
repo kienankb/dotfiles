@@ -1,13 +1,12 @@
 xsetroot -cursor_name left_ptr
 
-# Monitor setup on laptop
-if [ $(hostname) = friday ]; then
-	xrandr --output LVDS1 --auto --primary
-	xrandr --output HDMI1 --auto --right-of LVDS1
+# Monitor setup on fancy new laptop
+if [ $(hostname) = miranda ]; then
+	xrandr --output eDP1 --auto --primary
 fi
 
-# Monitor setup on desktop
-if [ $(hostname) = tuesday ]; then
+# Monitor setup for desktop
+if [ $(hostname) = ophelia ]; then
 	xrandr --output DP-4 --auto --primary
 fi
 
@@ -15,8 +14,12 @@ fi
 eval $(cat ~/.config/.fehbg)
 
 # For fixing touchpad scroll direction
-synclient VertScrollDelta=-101
-synclient HorizScrollDelta=-101
+synclient VertScrollDelta=-250
+synclient HorizScrollDelta=-250
+synclient TapButton1=1
+synclient TapButton2=3
+synclient TapButton3=2
+synclient PalmDetect=1
 
 # Start programs that need it
 exec bspwm

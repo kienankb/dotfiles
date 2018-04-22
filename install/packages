@@ -14,6 +14,7 @@ imagemagick
 libu2f-host
 maim
 mc
+mpc
 mpd
 mpv
 ncmpcpp
@@ -32,6 +33,7 @@ unzip
 vim
 wget
 wireless_tools
+xcursor-neutral
 xf86-input-synaptics
 xorg-xbacklight
 xorg-server

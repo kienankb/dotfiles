@@ -2,6 +2,7 @@ acpi
 alsa-utils
 asciinema
 bspwm
+bc
 chromium
 cmake
 compton
@@ -11,6 +12,8 @@ feh
 htop
 i3lock
 imagemagick
+irssi
+libinput
 libu2f-host
 maim
 mc
@@ -23,7 +26,9 @@ openssh
 pavucontrol
 perl-image-exiftool
 pulseaudio
+pulseaudio-equalizer
 python-pip
+ranger
 redshift
 stow
 sxhkd
@@ -34,7 +39,7 @@ vim
 wget
 wireless_tools
 xcursor-neutral
-xf86-input-synaptics
+xf86-input-libinput
 xorg-xbacklight
 xorg-server
 xorg-xinit

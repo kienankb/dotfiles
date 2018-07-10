@@ -31,6 +31,7 @@ bspc config borderless_monocle		false
 bspc rule -a scratchpad sticky=on state=floating
 bspc rule -a Onboard sticky=on state=floating border=off
 bspc rule -a Keybase state=floating
+bspc rule -a KeeWeb state=floating
 
 compton &
 redshift -l geoclue2 &

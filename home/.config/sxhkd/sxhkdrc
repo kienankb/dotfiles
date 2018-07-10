@@ -56,7 +56,7 @@ ctrl + alt + Delete
 
 # Sleepytime
 ctrl + alt + s
-	lock && sleep 5; sudo systemctl suspend
+	lock; sleep 1; sudo systemctl suspend
 
 # Screenshot
 Print

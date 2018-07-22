@@ -6,6 +6,7 @@ bc
 chromium
 cmake
 compton
+conky
 dmenu
 exa
 feh
@@ -25,11 +26,13 @@ neofetch
 openssh
 pavucontrol
 perl-image-exiftool
+powertop
 pulseaudio
 pulseaudio-equalizer
 python-pip
 ranger
 redshift
+sshfs
 stow
 sxhkd
 ttf-hack

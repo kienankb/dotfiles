@@ -34,7 +34,7 @@ bspc rule -a Keybase state=floating
 bspc rule -a KeeWeb state=floating
 
 compton &
-redshift -l geoclue2 &
+redshift-gtk &
 dropbox start &
 run_keybase &
 # telegram-desktop &

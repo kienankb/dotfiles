@@ -21,10 +21,10 @@ super + Escape
 
 # Adjust brightness up and down
 XF86MonBrightnessUp
-	xbacklight -inc 10
+	xbacklight -inc 5
 
 XF86MonBrightnessDown
-	xbacklight -dec 10
+	xbacklight -dec 5
 
 # Deal with volume
 XF86AudioMute

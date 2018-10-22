@@ -16,7 +16,13 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'chrisbra/Colorizer'
 Plug 'vitalk/vim-simple-todo'
+Plug 'junegunn/goyo.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'maralla/completor.vim'
 call plug#end()
 
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
+
+map <C-PageUp> :tabp<CR>
+map <C-PageDown> :tabn<CR>

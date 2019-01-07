@@ -7,7 +7,9 @@ fi
 
 # Monitor setup for desktop
 if [ $(hostname) = ophelia ]; then
+	xrandr --output HDMI-0 --off
 	xrandr --output DP-4 --auto --primary
+	xrandr --output DP-0 --auto --left-of DP-4
 fi
 
 # Set the wallpaper

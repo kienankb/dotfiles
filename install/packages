@@ -24,6 +24,7 @@ mpd
 mpv
 ncmpcpp
 neofetch
+noto-fonts-emoji
 openssh
 pavucontrol
 perl-image-exiftool
@@ -36,6 +37,7 @@ redshift
 sshfs
 stow
 sxhkd
+ttf-font-awesome
 ttf-hack
 tmux
 unzip

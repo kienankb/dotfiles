@@ -1,22 +1,25 @@
 [colors]
-background = #cc000000
-background-alt = #222222
-;foreground = #9aeaff
-foreground = #cccccc
+;background = #cc000000
+background = #d8d3b3
+background-alt = #b3d8d3
+foreground = #000000
+;foreground = #cccccc
 foreground-icon = #9ddeaf
 ;foreground-alt = #007a99
-foreground-alt = #2baf53
+foreground-alt = #d3b3d8
 alert = #ffb52a
 ;overline = #007a99
 overline = #468459
 
 [bar/miranda]
 monitor = ${env:MONITOR:eDP1}
-width = 100%
+width = 80%
 height = 20
+offset-y = 20
+offset-x = 10%
 background = ${colors.background}
 foreground = ${colors.foreground}
-overline-size = 2
+overline-size = 0
 underline-size = 2
 spacing = 1
 bottom = 1
@@ -25,10 +28,12 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 font-0 = Hack:size=9;2
+font-1 = "Font Awesome 5 Free:style=Solid:size=9;2"
+font-2 = "Font Awesome 5 Free:style=Regular:size=9;2"
+font-3 = Hack:style=italic:size=9;2
 wm-restack = bspwm
-modules-left = bspwm volume mpd
-modules-center = xwindow
-modules-right = filesystem memory cpu temperature vpncheck wlan battery date
+modules-left = bspwm xwindow mpd
+modules-right = volume filesystem memory cpu temperature vpncheck wlan battery date
 tray-position = right
 
 [bar/ophelia]
@@ -52,23 +57,25 @@ modules-center = xwindow
 modules-right = filesystem memory cpu temperature vpncheck eth date
 tray-position = right
 
+
 [module/vpncheck]
 type = custom/script
 exec = pgrep openvpn
 interval = 5
-label = VPN
+label =  VPN
 format-overline = ${colors.overline}
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
 format-overline = ${colors.overline}
+label =  %title%
+label-maxlen = 35
 
 [module/filesystem]
 type = internal/fs
 interval = 25
 mount-0 = /
-label-mounted = %percentage_free%%
+label-mounted =  %percentage_used%%
 label-unmounted = %mountpoint%
 label-unmounted-foreground = ${colors.foreground-alt}
 format-mounted-overline = ${colors.overline}
@@ -110,14 +117,14 @@ type = internal/cpu
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
 format-overline = ${colors.overline}
-label = %percentage%%
+label =  %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
 format-overline = ${colors.overline}
-label = %percentage_used%%
+label =  %percentage_used%%
 
 [module/wlan]
 type = internal/network
@@ -126,8 +133,8 @@ interval = 3.0
 format-connected = <label-connected>
 format-connected-overline = ${colors.overline}
 format-disconnected-overline = ${colors.alert}
-label-connected = %local_ip%
-label-disconnected = WLAN
+label-connected =  %essid%
+label-disconnected =  x.x.x.x
 
 [module/eth]
 type = internal/network
@@ -136,8 +143,8 @@ interval = 3.0
 format-connected = <label-connected>
 format-connected-overline = ${colors.overline}
 format-disconnected-overline = ${colors.alert}
-label-connected = %local_ip%
-label-disconnected = "ETH"
+label-connected =  %local_ip%
+label-disconnected =  x.x.x.x
 
 [module/date]
 type = internal/date
@@ -145,44 +152,40 @@ interval = 5
 date = %a %m.%d.%Y
 time = %H:%M
 format-overline = ${colors.overline}
-label = %date% %time%
+label =  %date%  %time%
 
 [module/volume]
-type = internal/alsa
-format-volume = <label-volume><bar-volume>
-label-volume = VOL:
-label-volume-foreground = ${colors.foreground}
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = "     muted     "
-bar-volume-width = 10
-bar-volume-foreground = ${colors.foreground-alt}
-;bar-volume-foreground-0 = #55aa55
-;bar-volume-foreground-1 = #55aa55
-;bar-volume-foreground-2 = #55aa55
-;bar-volume-foreground-3 = #55aa55
-;bar-volume-foreground-4 = #55aa55
-;bar-volume-foreground-5 = #f5a70a
-;bar-volume-foreground-6 = #f5a70a
-;bar-volume-foreground-7 = #ff5555
-;bar-volume-foreground-8 = #ff5555
-;bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-foreground = ${colors.foreground-alt}
-bar-volume-fill = ─
-bar-volume-empty = ─
-bar-volume-empty-foreground = ${colors.foreground}
+type = internal/pulseaudio
+format-volume = <ramp-volume> <label-volume>
+format-muted = <label-muted>
+label-volume = %percentage%%
+label-muted =  --%
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 [module/battery]
 type = internal/battery
 battery = BAT0
-adapter = AC
-full-at = 95
-format-charging = <label-charging>
-format-discharging = <label-discharging>
-format-full = <label-full>
+adapter = ADP1
+full-at = 100
+format-charging = <ramp-capacity><label-charging>
+format-discharging = <ramp-capacity><label-discharging>
+format-full =  <label-full>
 format-charging-overline = ${colors.overline}
 format-discharging-overline = ${colors.overline}
 format-full-overline = ${colors.overline}
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 500
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
 [module/temperature]
 type = internal/temperature
@@ -192,6 +195,6 @@ format = <label>
 format-overline = ${colors.overline}
 format-warn = <label-warn>
 format-warn-overline = ${self.format-overline}
-label = %temperature-c%
-label-warn = %temperature-c%
+label =  %temperature-c%
+label-warn =  %temperature-c%
 label-warn-foreground = ${colors.alert}

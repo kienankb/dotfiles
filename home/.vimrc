@@ -21,6 +21,8 @@ Plug 'flazz/vim-colorschemes'
 Plug 'maralla/completor.vim'
 call plug#end()
 
+colorscheme spacegray
+
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 

@@ -1,7 +1,7 @@
 {
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/woodlands.tmTheme",
+	"color_scheme": "Packages/DA UI/DA Dark.tmTheme",
 	"default_line_ending": "unix",
 	"font_face": "Hack",
 	"font_options":
@@ -21,6 +21,6 @@
 	"line_padding_bottom": 0,
 	"line_padding_top": 0,
 	"overlay_scroll_bars": "enabled",
-	"skin": "DA UI/Minimal",
+	"skin": "DA UI/Origin",
 	"theme": "DA.sublime-theme"
 }

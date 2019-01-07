@@ -28,13 +28,13 @@ XF86MonBrightnessDown
 
 # Deal with volume
 XF86AudioMute
-	amixer set Master toggle
+	pactl set-sink-mute 0 toggle
 
 XF86AudioRaiseVolume
-	amixer set Master 5%+
+	pactl set-sink-volume 0 +5%
 
 XF86AudioLowerVolume
-	amixer set Master 5%-
+	pactl set-sink-volume 0 -5%
 
 XF86AudioPause
 	mpc toggle

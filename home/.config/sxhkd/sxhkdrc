@@ -60,10 +60,11 @@ ctrl + alt + s
 
 # Screenshot
 Print
-	maim -u ~/$(date +"%Y%m%d-%H%M%S").png
+	#maim -u ~/$(date +"%Y%m%d-%H%M%S").png
+	import -window root ~/$(date +"%Y%m%d-%H%M%S").png
 
 super + Print
-	maim -su ~/$(date +"%Y%m%d-%H%M%S").png
+	import ~/$(date +"%Y%m%d-%H%M%S").png
 
 #
 # bspwm hotkeys

@@ -28,13 +28,9 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 export WORKON_HOME=$HOME/projects/.virtualenvs
 source /usr/bin/virtualenvwrapper_lazy.sh
 
-# set up ssh-agent
-if [ ! -f /tmp/ssh-agent.sh ]
+# source ssh-agent info
+
+if [ -f /tmp/ssh-agent.sh ]
 then
-	ssh-agent > /tmp/ssh-agent.sh
-	source /tmp/ssh-agent.sh > /dev/null
-	ssh-add ~/.ssh/*.osk
-	ssh-add ~/.ssh/*.psk
-else
 	source /tmp/ssh-agent.sh > /dev/null
 fi

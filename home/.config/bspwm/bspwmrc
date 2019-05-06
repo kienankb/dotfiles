@@ -35,8 +35,8 @@ fi
 if [ $(hostname) = ophelia ]
 then
 	bspc wm -O DP-4 DP-0
-	bspc monitor DP-4 -d 1 2 3 4 5
-	bspc monitor DP-0 -d 6 7 8 9 0
+	bspc monitor DP-4 -d web work code play read misc
+	bspc monitor DP-0 -d side
 	polybar ophelia &
 	polybar ophelia-side &
 fi

@@ -1,22 +1,16 @@
 [colors]
-;background = #cc000000
 background = #d8d3b3
 background-alt = #b3d8d3
 foreground = #000000
-;foreground = #cccccc
 foreground-icon = #9ddeaf
-;foreground-alt = #007a99
 foreground-alt = #d3b3d8
 alert = #ffb52a
-;overline = #007a99
 overline = #468459
 
 [bar/miranda]
 monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 20
-;offset-y = 20
-;offset-x = 10%
 background = ${colors.background}
 foreground = ${colors.foreground}
 overline-size = 0
@@ -32,7 +26,7 @@ font-1 = "Font Awesome 5 Free:style=Solid:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:size=9;2"
 font-3 = Hack:style=italic:size=9;2
 wm-restack = bspwm
-modules-left = bspwm-miranda xwindow mpd
+modules-left = bspwm xwindow mpd
 modules-right = volume filesystem memory cpu temperature vpncheck wlan battery date
 tray-position = right
 
@@ -40,8 +34,6 @@ tray-position = right
 monitor = ${env:MONITOR:DP-4}
 width = 100%
 height = 20
-;offset-y = 20
-;offset-x = 10%
 background = ${colors.background}
 foreground = ${colors.foreground}
 overline-size = 0
@@ -57,7 +49,7 @@ font-1 = "Font Awesome 5 Free:style=Solid:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:size=9;2"
 font-3 = Hack:style=italic:size=9;2
 wm-restack = bspwm
-modules-left = bspwm-ophelia xwindow mpd
+modules-left = bspwm xwindow mpd
 modules-right = volume filesystem memory cpu temperature vpncheck eth date
 tray-position = right
 
@@ -65,8 +57,6 @@ tray-position = right
 monitor = ${env:MONITOR:DP-0}
 width = 100%
 height = 20
-;offset-y = 20
-;offset-x = 10%
 background = ${colors.background}
 foreground = ${colors.foreground}
 overline-size = 0
@@ -81,9 +71,9 @@ font-0 = Hack:size=9;2
 font-1 = "Font Awesome 5 Free:style=Solid:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:size=9;2"
 font-3 = Hack:style=italic:size=9;2
-wm-restack = bspwm-ophelia
+wm-restack = bspwm
 modules-center = xwindow
-modules-right = bspwm
+modules-right = date
 
 [module/vpncheck]
 type = custom/script
@@ -107,7 +97,7 @@ label-unmounted = %mountpoint%
 label-unmounted-foreground = ${colors.foreground-alt}
 format-mounted-overline = ${colors.overline}
 
-[module/bspwm-miranda]
+[module/bspwm]
 type = internal/bspwm
 pin-workspaces = true
 ws-icon-0 = web;
@@ -116,23 +106,7 @@ ws-icon-2 = code;
 ws-icon-3 = play;
 ws-icon-4 = read;
 ws-icon-5 = misc;
-ws-icon-default = •
-label-focused = %icon%
-label-focused-background = ${colors.background-alt}
-label-focused-overline= ${colors.overline}
-label-focused-padding = 1
-label-occupied = %icon%
-label-occupied-padding = 1
-label-urgent = %icon%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
-label-empty = %icon%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 1
-
-[module/bspwm-ophelia]
-type = internal/bspwm
-pin-workspaces = true
+ws-icon-6 = side;
 ws-icon-default = •
 label-focused = %icon%
 label-focused-background = ${colors.background-alt}

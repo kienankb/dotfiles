@@ -28,14 +28,14 @@ fi
 
 if [ $(hostname) = miranda ]
 then
-	bspc monitor eDP1 -d web work code play read misc
+	bspc monitor eDP1 -d web work code chat play read misc
 	polybar miranda &
 fi
 
 if [ $(hostname) = ophelia ]
 then
 	bspc wm -O DP-4 DP-0
-	bspc monitor DP-4 -d web work code play read misc
+	bspc monitor DP-4 -d web work code chat play read misc
 	bspc monitor DP-0 -d side
 	polybar ophelia &
 	polybar ophelia-side &

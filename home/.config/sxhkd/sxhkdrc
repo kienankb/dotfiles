@@ -9,7 +9,8 @@ super + Return
 # Launcher
 super + space
 #	lighthouse | bash
-	dmenu_run -b
+#	dmenu_run -b
+	rofi -show run
 
 # Scratchpad
 alt + s

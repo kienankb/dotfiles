@@ -21,6 +21,7 @@ source ~/.bash_aliases
 
 eval $(thefuck --alias)
 
+export KITTY_HOSTNAME=`hostname`
 export EDITOR=vim
 export PATH=$PATH:/sbin:~/.scripts:~/.cargo/bin
 export PS1="\[\033[38;5;5m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;4m\]\[$(hostname)\]\[$(tput sgr0)\]\[\033[38;5;15m\][\[$(tput sgr0)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]]\n\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"

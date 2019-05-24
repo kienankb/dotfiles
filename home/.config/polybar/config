@@ -1,12 +1,20 @@
 [colors]
-background = #d8d3b3
-background-alt = #b3d8d3
-foreground = #000000
-foreground-icon = #9ddeaf
-foreground-alt = #d3b3d8
-alert = #ffb52a
+background = #1D1F21
+background-alt = #707880
+foreground = #C5C8C6
+foreground-alt = #F0C674
+alert = #CC6666
 overline = #468459
 
+[bspwmcolors]
+focused-background =	#C5C8C6
+focused-foreground =	#1D1F21
+urgent-background =		#CC6666
+urgent-foreground =		#1D1F21
+empty-foreground =		#707880
+occupied-foreground =	#b294bb
+
+; laptop bar
 [bar/miranda]
 monitor = ${env:MONITOR:eDP1}
 width = 100%
@@ -14,7 +22,7 @@ height = 20
 background = ${colors.background}
 foreground = ${colors.foreground}
 overline-size = 0
-underline-size = 2
+underline-size = 0
 spacing = 1
 bottom = 1
 padding-left = 0
@@ -30,6 +38,7 @@ modules-left = bspwm xwindow mpd
 modules-right = volume filesystem memory cpu temperature vpncheck wlan battery date
 tray-position = right
 
+; desktop bar, main monitor
 [bar/ophelia]
 monitor = ${env:MONITOR:DP-4}
 width = 100%
@@ -37,7 +46,7 @@ height = 20
 background = ${colors.background}
 foreground = ${colors.foreground}
 overline-size = 0
-underline-size = 2
+underline-size = 0
 spacing = 1
 bottom = 1
 padding-left = 0
@@ -49,10 +58,11 @@ font-1 = "Font Awesome 5 Free:style=Solid:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:size=9;2"
 font-3 = Hack:style=italic:size=9;2
 wm-restack = bspwm
-modules-left = bspwm xwindow mpd
+modules-left = bspwm xwindow
 modules-right = volume filesystem memory cpu temperature vpncheck eth date
 tray-position = right
 
+; desktop bar, side monitor
 [bar/ophelia-side]
 monitor = ${env:MONITOR:DP-0}
 width = 100%
@@ -60,7 +70,7 @@ height = 20
 background = ${colors.background}
 foreground = ${colors.foreground}
 overline-size = 0
-underline-size = 2
+underline-size = 0
 spacing = 1
 bottom = 1
 padding-left = 0
@@ -80,11 +90,9 @@ type = custom/script
 exec = pgrep openvpn
 interval = 5
 label =  VPN
-format-overline = ${colors.overline}
 
 [module/xwindow]
 type = internal/xwindow
-format-overline = ${colors.overline}
 label = %title%
 label-maxlen = 45
 
@@ -95,7 +103,6 @@ mount-0 = /
 label-mounted =  %percentage_used%%
 label-unmounted = %mountpoint%
 label-unmounted-foreground = ${colors.foreground-alt}
-format-mounted-overline = ${colors.overline}
 
 [module/bspwm]
 type = internal/bspwm
@@ -110,16 +117,20 @@ ws-icon-6 = misc;
 ws-icon-7 = side;
 ws-icon-default = •
 label-focused = %icon%
-label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.foreground}
 label-focused-overline= ${colors.overline}
 label-focused-padding = 1
 label-occupied = %icon%
+label-occupied-underline = ${bspwmcolors.occupied-foreground}
 label-occupied-padding = 1
-label-urgent = %icon%!
-label-urgent-background = ${colors.alert}
+label-occupied-foreground = ${bspwmcolors.occupied-foreground}
+label-urgent = %icon%
+label-urgent-foreground = ${bspwmcolors.urgent-foreground}
+label-urgent-background = ${bspwmcolors.urgent-background}
 label-urgent-padding = 1
 label-empty = %icon%
-label-empty-foreground = ${colors.foreground-alt}
+label-empty-foreground = ${bspwmcolors.empty-foreground}
 label-empty-padding = 1
 
 [module/mpd]
@@ -141,14 +152,12 @@ toggle-off-foreground = ${colors.foreground-alt}
 type = internal/cpu
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
-format-overline = ${colors.overline}
 label =  %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
-format-overline = ${colors.overline}
 label =  %percentage_used%%
 
 [module/wlan]
@@ -156,8 +165,6 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 format-connected = <label-connected>
-format-connected-overline = ${colors.overline}
-format-disconnected-overline = ${colors.alert}
 label-connected =  %essid%
 label-disconnected =  x.x.x.x
 
@@ -166,8 +173,6 @@ type = internal/network
 interface = enp0s31f6
 interval = 3.0
 format-connected = <label-connected>
-format-connected-overline = ${colors.overline}
-format-disconnected-overline = ${colors.alert}
 label-connected =  %local_ip%
 label-disconnected =  x.x.x.x
 
@@ -176,7 +181,6 @@ type = internal/date
 interval = 5
 date = %a %m.%d.%Y
 time = %H:%M
-format-overline = ${colors.overline}
 label =  %date%  %time%
 
 [module/volume]
@@ -197,9 +201,6 @@ full-at = 100
 format-charging = <ramp-capacity><label-charging>
 format-discharging = <ramp-capacity><label-discharging>
 format-full =  <label-full>
-format-charging-overline = ${colors.overline}
-format-discharging-overline = ${colors.overline}
-format-full-overline = ${colors.overline}
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
@@ -217,9 +218,7 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 85
 format = <label>
-format-overline = ${colors.overline}
 format-warn = <label-warn>
-format-warn-overline = ${self.format-overline}
 label =  %temperature-c%
 label-warn =  %temperature-c%
 label-warn-foreground = ${colors.alert}

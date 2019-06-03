@@ -34,7 +34,8 @@ font-1 = "Font Awesome 5 Free:style=Solid:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:size=9;2"
 font-3 = Hack:style=italic:size=9;2
 wm-restack = bspwm
-modules-left = bspwm xwindow mpd
+modules-left = bspwm mpd
+modules-center = xwindow
 modules-right = volume filesystem memory cpu temperature vpncheck wlan battery date
 tray-position = right
 
@@ -58,7 +59,8 @@ font-1 = "Font Awesome 5 Free:style=Solid:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:size=9;2"
 font-3 = Hack:style=italic:size=9;2
 wm-restack = bspwm
-modules-left = bspwm xwindow
+modules-left = bspwm mpd
+modules-center = xwindow
 modules-right = volume filesystem memory cpu temperature vpncheck eth date
 tray-position = right
 
@@ -138,12 +140,12 @@ type = internal/mpd
 format-online = <icon-prev><toggle><icon-next> <label-song>
 label-song-maxlen = 25
 label-song-ellipsis = false
-icon-prev = <
+icon-prev = 
 icon-seekb = <<
 icon-stop = X
-icon-play = O
-icon-pause = #
-icon-next = >
+icon-play = 
+icon-pause = 
+icon-next = 
 icon-seekf = >>
 toggle-on-foreground = ${colors.foreground}
 toggle-off-foreground = ${colors.foreground-alt}

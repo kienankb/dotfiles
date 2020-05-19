@@ -3,6 +3,7 @@ set mouse=a
 syntax on
 set shiftwidth=4
 set tabstop=4
+set expandtab
 set backspace=indent,eol,start
 set laststatus=2
 set noeol
@@ -10,6 +11,7 @@ set hlsearch
 set wildmode=longest:full
 set wildmenu
 set switchbuf+=usetab,newtab
+set nu rnu
 
 highlight Comment cterm=italic gui=italic
 highlight MatchParam cterm=underline ctermbg=NONE ctermfg=NONE
@@ -29,9 +31,10 @@ Plug 'maralla/completor.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'dylanaraps/wal.vim'
 call plug#end()
 
-colorscheme spacegray
+colorscheme wal
 
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()

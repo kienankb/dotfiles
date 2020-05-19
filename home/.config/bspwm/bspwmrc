@@ -28,7 +28,7 @@ fi
 
 if [ $(hostname) = miranda ]
 then
-	bspc monitor eDP1 -d web work code chat play read misc
+	bspc monitor eDP1 -d web work code push chat play read misc
 	polybar miranda &
 fi
 

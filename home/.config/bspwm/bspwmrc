@@ -35,8 +35,9 @@ fi
 if [ $(hostname) = ophelia ]
 then
 	bspc wm -O DP-4 DP-0
-	bspc monitor DP-4 -d web work code chat play read misc
+	bspc monitor DP-4 -d web work code push chat play read misc
 	bspc monitor DP-0 -d side
+	bspc monitor HDMI-0 --remove
 	polybar ophelia &
 	polybar ophelia-side &
 fi
@@ -44,13 +45,15 @@ fi
 # Set the wallpaper
 eval $(cat ~/.config/.fehbg)
 
-bspc config bottom_padding			20
-bspc config top_padding				0
+bspc config bottom_padding			40
+bspc config top_padding				20
+bspc config right_padding			20
+bspc config left_padding			20
 bspc config window_gap				5
 bspc config border_width			1
-bspc config normal_border_color		\#1D1F21
-bspc config active_border_color		\#1D1F21
-bspc config focused_border_color	\#C5C8C6
+bspc config normal_border_color		\#706B82
+bspc config active_border_color		\#706B82
+bspc config focused_border_color	\#976870
 bspc config presel_feedback_color	\#707880
 bspc config split_ratio				0.50
 bspc config borderless_monocle		true
@@ -64,7 +67,7 @@ bspc rule -a Keybase state=floating
 bspc rule -a KeeWeb state=floating
 bspc rule -a feh state=floating
 
-compton &
+picom &
 redshift-gtk &
-run_keybase &
+# run_keybase &
 # telegram-desktop &

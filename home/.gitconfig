@@ -6,3 +6,10 @@
 [core]
 	editor = vim
 	quotepath = false
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+    pl = pull
+    ps = push

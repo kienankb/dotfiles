@@ -135,6 +135,9 @@ alt + shift + Tab
 super + bracket{left,right}
 	bspc desktop -f {prev,next}
 
+super + {button4,button5}
+    bspc desktop -f {prev,next}
+
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last

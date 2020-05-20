@@ -39,6 +39,7 @@ python-pip
 ranger
 redshift
 rofi
+rofimoji
 sshfs
 stow
 sxhkd
@@ -49,6 +50,7 @@ unzip
 vim
 wget
 wireless_tools
+xclip
 xcursor-neutral
 xf86-input-libinput
 xorg-xbacklight

@@ -1,9 +1,11 @@
 https://github.com/jaagr/polybar.git
-git://git.suckless.org/st
 https://github.com/junegunn/vim-plug.git
 https://aur.archlinux.org/keeweb-desktop.git
 https://aur.archlinux.org/libc++.git
 https://aur.archlinux.org/discord.git
 https://aur.archlinux.org/spotify.git
-https://aur.archlinux.org/brave-beta-bin.git
-https://aur.archlinux.org/keybase-bin.git
+https://aur.archlinux.org/simple-mtpfs.git
+https://aur.archlinux.org/firefox-nightly.git
+https://aur.archlinux.org/mullvad-vpn.git
+https://github.com/longld/peda.git
+https://aur.archlinux.org/ttf-ms-win10.git

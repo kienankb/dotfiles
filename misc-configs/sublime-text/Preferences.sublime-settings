@@ -1,8 +1,8 @@
 {
 	"always_show_minimap_viewport": true,
-	"bold_folder_labels": true,
-	"color_scheme": "Packages/DA UI/DA Dark.tmTheme",
+	"color_scheme": "Packages/Materialize/schemes/Material Spaceblack.tmTheme",
 	"default_line_ending": "unix",
+	"draw_centered": true,
 	"font_face": "Hack",
 	"font_options":
 	[
@@ -18,9 +18,15 @@
 		"draw_normal",
 		"draw_active"
 	],
-	"line_padding_bottom": 0,
-	"line_padding_top": 0,
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"material_theme_disable_fileicons": false,
+	"material_theme_accent_lime": true,
+	"material_theme_disable_folder_animation": true,
 	"overlay_scroll_bars": "enabled",
 	"skin": "DA UI/Origin",
-	"theme": "DA.sublime-theme"
+	"theme": "Material Spaceblack.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"word_wrap": true,
+	"wrap_width": 120
 }

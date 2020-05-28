@@ -36,7 +36,7 @@ font-3 = Hack:style=italic:size=9;2
 wm-restack = bspwm
 modules-left = bspwm mpd
 modules-center = xwindow
-modules-right = volume filesystem memory cpu temperature vpncheck wlan battery date
+modules-right = github volume filesystem memory cpu temperature vpncheck wlan battery date
 tray-position = right
 
 ; desktop bar, main monitor
@@ -61,7 +61,7 @@ font-3 = Hack:style=italic:size=9;2
 wm-restack = bspwm
 modules-left = bspwm mpd
 modules-center = xwindow
-modules-right = volume filesystem memory cpu temperature vpncheck eth date
+modules-right = github volume filesystem memory cpu temperature vpncheck eth date
 tray-position = right
 
 ; desktop bar, side monitor
@@ -86,6 +86,13 @@ font-3 = Hack:style=italic:size=9;2
 wm-restack = bspwm
 modules-center = xwindow
 modules-right = date
+
+[module/github]
+type = internal/github
+token = ${file:/home/kienan/.config/githubaccess.token}
+user = kienankb
+interval = 60
+label =  %notifications%
 
 [module/vpncheck]
 type = custom/script

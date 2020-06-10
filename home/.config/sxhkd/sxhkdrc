@@ -50,7 +50,7 @@ super + shift + m
 
 # Lock
 super + l
-	lock
+	betterlockscreen -l dimblur
 
 # Reboot
 ctrl + alt + Delete
@@ -58,7 +58,7 @@ ctrl + alt + Delete
 
 # Sleepytime
 ctrl + alt + s
-	lock; sleep 1; sudo systemctl suspend
+	betterlockscreen -s dimblur
 
 # Screenshot
 Print

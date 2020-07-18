@@ -1,1 +1,2 @@
 copy-only = true
+files = [emojis, latin-1_supplement, latin_extended-a, latin_extended-b, latin_extended-c, latin_extended-d, latin_extended_additional]

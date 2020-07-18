@@ -13,3 +13,5 @@
 	st = status
     pl = pull
     ps = push
+[pull]
+	rebase = false

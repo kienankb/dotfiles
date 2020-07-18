@@ -13,6 +13,7 @@ fi
 if [ $(hostname) = ophelia ]; then
 	xrandr --output HDMI-0 --off
 	xrandr --output DP-4 --auto --primary
+    xrandr --output DP-2 --auto --right-of DP-4
 	xrandr --output DP-0 --auto --left-of DP-4
 fi
 
@@ -34,12 +35,14 @@ fi
 
 if [ $(hostname) = ophelia ]
 then
-	bspc wm -O DP-4 DP-0
+	bspc wm -O DP-4 DP-0 DP-2
 	bspc monitor DP-4 -d web work code push chat play read misc
-	bspc monitor DP-0 -d side
+	bspc monitor DP-0 -d left
+	bspc monitor DP-2 -d right
 	bspc monitor HDMI-0 --remove
 	polybar ophelia &
-	polybar ophelia-side &
+	polybar ophelia-left &
+    polybar ophelia-right &
 fi
 
 # Set the wallpaper

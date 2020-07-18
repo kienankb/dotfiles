@@ -64,9 +64,32 @@ modules-center = xwindow
 modules-right = github volume filesystem memory cpu temperature vpncheck eth date
 tray-position = right
 
-; desktop bar, side monitor
-[bar/ophelia-side]
+; desktop bar, left monitor
+[bar/ophelia-left]
 monitor = ${env:MONITOR:DP-0}
+width = 100%
+height = 20
+background = ${colors.background}
+foreground = ${colors.foreground}
+overline-size = 0
+underline-size = 0
+spacing = 1
+bottom = 1
+padding-left = 0
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 1
+font-0 = Hack:size=9;2
+font-1 = "Font Awesome 5 Free:style=Solid:size=9;2"
+font-2 = "Font Awesome 5 Free:style=Regular:size=9;2"
+font-3 = Hack:style=italic:size=9;2
+wm-restack = bspwm
+modules-center = xwindow
+modules-right = date
+
+; desktop bar, right monitor
+[bar/ophelia-right]
+monitor = ${env:MONITOR:DP-2}
 width = 100%
 height = 20
 background = ${colors.background}
@@ -124,7 +147,8 @@ ws-icon-4 = chat;
 ws-icon-5 = play;
 ws-icon-6 = read;
 ws-icon-7 = misc;
-ws-icon-8 = side;
+ws-icon-8 = left;
+ws-icon-9 = right;
 ws-icon-default = •
 label-focused = %icon%
 label-focused-foreground = ${colors.background}

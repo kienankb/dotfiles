@@ -2,16 +2,17 @@
 # WM independent hotkeys
 #
 
-# Terminal emulator
+# term
 super + Return
-#	st
 	kitty
 
-# Launcher
+# cmd launcher
+super + shift + space
+	rofi -show run
+
+# app launcher
 super + space
-#	lighthouse | bash
-#	dmenu_run -b
-	rofi -show run -font "Segoe UI 12"
+	rofi -show drun
 
 # Scratchpad
 alt + s
@@ -151,6 +152,10 @@ super + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# send to the given monitor
+super + shift + {Left,Right}
+	bspc node focused -m {west,east}
 
 #
 # preselect

@@ -23,7 +23,7 @@ eval $(thefuck --alias)
 
 export KITTY_HOSTNAME=`hostname`
 export EDITOR=vim
-export PATH=$PATH:/sbin:~/.scripts:~/.cargo/bin
+export PATH=$PATH:/sbin:~/.scripts:~/.cargo/bin:~/.local/bin
 export PS1="\[\033[38;5;5m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;4m\]\[$(hostname)\]\[$(tput sgr0)\]\[\033[38;5;15m\][\[$(tput sgr0)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]]\n\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export WORKON_HOME=$HOME/projects/.virtualenvs
@@ -36,6 +36,5 @@ then
 	source /tmp/ssh-agent.sh > /dev/null
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

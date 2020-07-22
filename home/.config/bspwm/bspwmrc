@@ -72,5 +72,6 @@ bspc rule -a feh state=floating
 
 picom &
 redshift-gtk &
+dropbox
 # run_keybase &
 # telegram-desktop &

@@ -69,11 +69,10 @@ ctrl + alt + s
 
 # Screenshot
 Print
-	#maim -u ~/$(date +"%Y%m%d-%H%M%S").png
-	import -window root ~/$(date +"%Y%m%d-%H%M%S").png
+	gscreenshot-cli -c -f ~/scrots/$(date +"%Y%m%d-%H%M%S").png
 
 super + Print
-	import ~/$(date +"%Y%m%d-%H%M%S").png
+	gscreenshot-cli -s -c -f ~/scrots/$(date +"%Y%m%d-%H%M%S").png
 
 #
 # bspwm hotkeys

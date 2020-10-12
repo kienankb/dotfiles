@@ -11,6 +11,7 @@ configuration {
   text-color: #8ca0aa;
   spacing: 0;
   width: 512px;
+  lines: 10;
 }
 
 inputbar {

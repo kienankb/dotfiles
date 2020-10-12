@@ -1,6 +1,7 @@
 {
 	"always_show_minimap_viewport": true,
-	"color_scheme": "Packages/Materialize/schemes/Material Spaceblack.tmTheme",
+	"auto_close_tags": false,
+	"color_scheme": "Packages/Materialize/schemes/Material Spacegray.tmTheme",
 	"default_line_ending": "unix",
 	"draw_centered": true,
 	"font_face": "Hack",
@@ -25,7 +26,7 @@
 	"material_theme_disable_folder_animation": true,
 	"overlay_scroll_bars": "enabled",
 	"skin": "DA UI/Origin",
-	"theme": "Material Spaceblack.sublime-theme",
+	"theme": "Material Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"word_wrap": true,
 	"wrap_width": 120

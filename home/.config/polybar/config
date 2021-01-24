@@ -34,7 +34,7 @@ font-1 = "Font Awesome 5 Free:style=Solid:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:size=9;2"
 font-3 = Hack:style=italic:size=9;2
 wm-restack = bspwm
-modules-left = bspwm mpd
+modules-left = bspwm-miranda mpd
 modules-right = github volume filesystem memory cpu temperature vpncheck wlan battery date
 tray-position = right
 
@@ -58,7 +58,7 @@ font-1 = "Font Awesome 5 Free:style=Solid:size=9;2"
 font-2 = "Font Awesome 5 Free:style=Regular:size=9;2"
 font-3 = Hack:style=italic:size=9;2
 wm-restack = bspwm
-modules-left = bspwm mpd
+modules-left = bspwm-ophelia mpd
 modules-right = github volume dunstify filesystem memory cpu temperature vpncheck eth date
 tray-position = right
 
@@ -132,7 +132,38 @@ label-mounted =  %percentage_used%%
 label-unmounted = %mountpoint%
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/bspwm]
+[module/bspwm-miranda]
+type = internal/bspwm
+pin-workspaces = true
+ws-icon-0 = web;
+ws-icon-1 = work;
+ws-icon-2 = code;
+ws-icon-3 = push;
+ws-icon-4 = chat;
+ws-icon-5 = mail;
+ws-icon-6 = play;
+ws-icon-7 = misc;
+ws-icon-8 = left;
+ws-icon-9 = right;
+ws-icon-default = •
+label-focused = %icon%
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.foreground}
+label-focused-overline= ${colors.overline}
+label-focused-padding = 1
+label-occupied = %icon%
+label-occupied-underline = ${bspwmcolors.occupied-foreground}
+label-occupied-padding = 1
+label-occupied-foreground = ${bspwmcolors.occupied-foreground}
+label-urgent = %icon%
+label-urgent-foreground = ${bspwmcolors.urgent-foreground}
+label-urgent-background = ${bspwmcolors.urgent-background}
+label-urgent-padding = 1
+label-empty = %icon%
+label-empty-foreground = ${bspwmcolors.empty-foreground}
+label-empty-padding = 1
+
+[module/bspwm-ophelia]
 type = internal/bspwm
 pin-workspaces = true
 ws-icon-0 = web;

@@ -31,12 +31,14 @@ Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'dylanaraps/wal.vim'
 Plug 'tmsvg/pear-tree'
+Plug 'sheerun/vim-polyglot'
+Plug 'sainnhe/forest-night'
 call plug#end()
 
 colorscheme wal
 
 highlight Comment cterm=italic gui=italic
-highlight MatchParam cterm=underline ctermbg=NONE ctermfg=NONE
+highlight MatchParam term=underline cterm=underline ctermbg=NONE ctermfg=NONE
 
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()

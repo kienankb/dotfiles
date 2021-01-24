@@ -23,7 +23,7 @@
 	"line_padding_top": 1,
 	"overlay_scroll_bars": "enabled",
 	"skin": "DA UI/Origin",
-	"theme": "Fits.sublime-theme",
+	"theme": "DA.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"word_wrap": true,
 	"wrap_width": 120

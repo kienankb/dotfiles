@@ -59,7 +59,7 @@ font-2 = "Font Awesome 5 Free:style=Regular:size=9;2"
 font-3 = Hack:style=italic:size=9;2
 wm-restack = bspwm
 modules-left = bspwm mpd
-modules-right = github volume filesystem memory cpu temperature vpncheck eth date
+modules-right = github volume dunstify filesystem memory cpu temperature vpncheck eth date
 tray-position = right
 
 ; desktop bar, left monitor
@@ -252,3 +252,9 @@ format-warn = <label-warn>
 label =  %temperature-c%
 label-warn =  %temperature-c%
 label-warn-foreground = ${colors.alert}
+
+[module/dunstify]
+type = custom/script
+exec = toggledunstify
+interval = 1
+click-left = dunstctl set-paused toggle

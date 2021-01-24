@@ -1,0 +1,9 @@
+#!/bin/bash
+
+CURRENT=$(dunstctl is-paused)
+
+if [ "$CURRENT" = "true" ];then
+    echo "";
+else
+    echo "";
+fi

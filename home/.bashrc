@@ -24,7 +24,7 @@ eval $(thefuck --alias)
 export KITTY_HOSTNAME=`hostname`
 export EDITOR=vim
 export PATH=$PATH:/sbin:~/.scripts:~/.cargo/bin:~/.local/bin
-export PS1="\[\033[38;5;5m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;4m\]\[$(hostname)\]\[$(tput sgr0)\]\[\033[38;5;15m\][\[$(tput sgr0)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]]\n\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
+source ~/.local/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export WORKON_HOME=$HOME/projects/.virtualenvs
 source /usr/bin/virtualenvwrapper_lazy.sh

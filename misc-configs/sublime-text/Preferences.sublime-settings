@@ -1,7 +1,7 @@
 {
 	"always_show_minimap_viewport": true,
 	"auto_close_tags": false,
-	"color_scheme": "Packages/Materialize/schemes/Material Spacegray.tmTheme",
+	"color_scheme": "Packages/User/dusky-sun.tmTheme",
 	"default_line_ending": "unix",
 	"draw_centered": true,
 	"font_face": "Hack",
@@ -21,12 +21,9 @@
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
-	"material_theme_accent_lime": true,
-	"material_theme_disable_fileicons": false,
-	"material_theme_disable_folder_animation": true,
 	"overlay_scroll_bars": "enabled",
 	"skin": "DA UI/Origin",
-	"theme": "Material Spacegray.sublime-theme",
+	"theme": "Fits.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"word_wrap": true,
 	"wrap_width": 120

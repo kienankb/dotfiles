@@ -29,7 +29,7 @@ bspc config bottom_padding 5
 
 if [ $(hostname) = miranda ]
 then
-	bspc monitor eDP1 -d web work code push chat play read misc
+	bspc monitor eDP1 -d web work code push chat mail play misc
     bspc config -m eDP1 bottom_padding 25
 	polybar miranda &
 fi

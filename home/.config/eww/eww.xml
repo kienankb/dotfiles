@@ -1,0 +1,67 @@
+<eww>
+    <includes></includes>
+    <definitions>
+        <def name="clock">
+            <box space-evenly="false">
+                <box space-evenly="false" class="icon"></box>{{date}}
+                <box class="icon"></box>{{time}}
+            </box>
+        </def>
+        <def name="wm">
+            <literal content="{{report}}"/>
+        </def>
+        <def name="sys">
+            <box space-evenly="false">
+                <box class="icon padded"></box>{{round(EWW_CPU_USAGE.avg, 0)}}%
+                <box class="icon padded"></box>{{round(EWW_RAM, 1)}}GB
+                <box class="icon padded"></box>{{round((EWW_DISK["/"].free/EWW_DISK["/"].total) * 100, 0)}}%
+                <box class="icon padded"></box>{{EWW_TEMPS.CPU}}°C
+                <box class="icon padded"></box>{{EWW_BATTERY["BAT0"]["capacity"]}}%
+            </box>
+        </def>
+        <def name="left">
+            <box space-evenly="false">
+                <box class="barSection" space-evenly="false">
+                    <wm report="{{bspwm}}"/>
+                </box>
+            </box>
+        </def>
+        <def name="right">
+            <box space-evenly="false" halign="end">
+                <box class="barSection padded" space-evenly="false">
+                    <sys />
+                </box>
+                <box class="barSection padded" space-evenly="false">
+                    <clock date="{{date}}" time="{{time}}"/>
+                </box>
+            </box>
+        </def>
+    </definitions>
+    <variables>
+        <script-var name="time" interval="1s">
+            date +%H:%M
+        </script-var>
+        <script-var name="date" interval="1s">
+            date +%m.%d.%Y
+        </script-var>
+        <script-var name="bspwm">
+            IFS=" "; bspc subscribe | sed -ue "s/:/ /g" | eww_bspwm
+        </script-var>
+    </variables>
+    <windows>
+        <window name="bar_left" stacking="fg" focusable="false">
+            <geometry anchor="top left" x="0px" y="0px" width="100%" height="20px"/>
+            <reserve side="left" distance="50px"/>
+            <widget>
+                <left/>
+            </widget>
+        </window>
+        <window name="bar_right" stacking="fg" focusable="false">
+            <geometry anchor="top right" x="0px" y="0px" height="20px"/>
+            <reserve side="right" distance="50px"/>
+            <widget>
+                <right/>
+            </widget>
+        </window>
+    </windows>
+</eww>

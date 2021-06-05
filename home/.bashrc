@@ -23,7 +23,7 @@ eval $(thefuck --alias)
 
 export KITTY_HOSTNAME=`hostname`
 export EDITOR=vim
-export PATH=$PATH:/sbin:~/.scripts:~/.cargo/bin:~/.local/bin
+export PATH=$PATH:/sbin:~/.scripts:~/.cargo/bin:~/.local/bin:~/projects/tools/eww/target/release
 source ~/.local/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export WORKON_HOME=$HOME/projects/.virtualenvs
@@ -38,3 +38,4 @@ fi
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+. "$HOME/.cargo/env"

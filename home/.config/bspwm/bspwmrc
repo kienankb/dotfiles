@@ -32,9 +32,14 @@ bspc config bottom_padding 5
 
 if [ $(hostname) = miranda ]
 then
-	bspc monitor eDP1 -d web work code push chat mail play misc
-    bspc config -m eDP1 bottom_padding 25
-	polybar miranda &
+	# bspc monitor eDP1 -d web work code push chat mail play misc
+	bspc monitor eDP1 -d        
+    bspc config -m eDP1 bottom_padding 5
+    bspc config -m eDP1 top_padding 30
+    eww/target/release/eww daemon
+    eww/target/release/eww open bar_left
+    eww/target/release/eww open bar_right
+	# polybar miranda &
 fi
 
 if [ $(hostname) = ophelia ]

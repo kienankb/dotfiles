@@ -3,6 +3,9 @@
 sxhkd &
 
 xsetroot -cursor_name left_ptr
+if [ $(hostname) = ophelia ]; then
+    xinput --set-prop 14 "libinput Accel Speed" 1
+fi
 
 # Monitor setup on fancy new laptop
 if [ $(hostname) = miranda ]; then

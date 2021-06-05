@@ -1,0 +1,25 @@
+#!/bin/bash
+
+while read -ra line
+do
+    output=""
+    for section in "${line[@]}"
+    do
+        STATE=${section::1}
+        NAME=${section:1}
+        CLASS=""
+        if [[ $STATE == "f" ]]; then
+            CLASS="f"
+        elif [[ $STATE == "F" ]]; then
+            CLASS="F"
+        elif [[ $STATE == "o" ]]; then
+            CLASS="o"
+        elif [[ $STATE == "O" ]]; then
+            CLASS="O"
+        else
+            continue
+        fi
+        output+="<box width=\"35\" class=\"wmdesktop ${CLASS}\">${NAME}</box>"
+    done
+    echo "<box space-evenly=\"false\">${output}</box>"
+done

@@ -28,38 +28,31 @@ if [ $(hostname) = miranda ]; then
 	synclient PalmDetect=1
 fi
 
-bspc config bottom_padding 5
+bspc config bottom_padding			5
+bspc config top_padding				5
+bspc config right_padding			5
+bspc config left_padding			5
 
 if [ $(hostname) = miranda ]
 then
-	# bspc monitor eDP1 -d web work code push chat mail play misc
 	bspc monitor eDP1 -d        
-    bspc config -m eDP1 bottom_padding 5
     bspc config -m eDP1 top_padding 30
-    eww/target/release/eww daemon
-    eww/target/release/eww open bar_left
-    eww/target/release/eww open bar_right
-	# polybar miranda &
 fi
 
 if [ $(hostname) = ophelia ]
 then
 	bspc wm -O DP-4 DP-0 DP-2
-	bspc monitor DP-4 -d web work code push chat play read misc
-	bspc monitor DP-0 -d left
-	bspc monitor DP-2 -d right
+	bspc monitor DP-4 -d      
+	bspc monitor DP-0 -d 
+	bspc monitor DP-2 -d 
 	bspc monitor HDMI-0 --remove
-    bspc config -m DP-4 bottom_padding 25
-	polybar ophelia &
+    bspc config -m DP-4 top_padding 30
 fi
 
 # Set the wallpaper
 #eval $(cat ~/.config/.fehbg)
 wal -i ~/.wallpaper
 
-bspc config top_padding				5
-bspc config right_padding			5
-bspc config left_padding			5
 bspc config window_gap				5
 bspc config border_width			1
 bspc config normal_border_color		\#555555
@@ -80,6 +73,10 @@ bspc rule -a feh state=floating
 
 picom &
 redshift-gtk &
-dropbox
+dropbox &
 # run_keybase &
 # telegram-desktop &
+eww daemon
+sleep 1
+eww open bar_left
+eww open bar_right

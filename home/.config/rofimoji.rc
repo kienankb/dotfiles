@@ -1,2 +1,2 @@
-copy-only = true
+action = copy
 files = [emojis, latin-1_supplement, latin_extended-a, latin_extended-b, latin_extended-c, latin_extended-d, latin_extended_additional]

@@ -5,6 +5,7 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 set backspace=indent,eol,start
+set wrap linebreak
 set laststatus=2
 set noeol
 set hlsearch
@@ -45,7 +46,7 @@ python3 powerline_setup()
 
 map <C-PageUp> :tabp<CR>
 map <C-PageDown> :tabn<CR>
-nnoremap <C-p> :FZF<CR>
+nnoremap <C-p> :Files<CR>
 
 "" completor: tab to cycle, enter to complete
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"

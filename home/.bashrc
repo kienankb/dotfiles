@@ -28,6 +28,7 @@ source ~/.local/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export WORKON_HOME=$HOME/projects/.virtualenvs
 source /usr/bin/virtualenvwrapper_lazy.sh
+export FZF_DEFAULT_COMMAND="ag --hidden --ignore .git -f -g \"\""
 
 # source ssh-agent info
 

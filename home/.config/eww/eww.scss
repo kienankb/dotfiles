@@ -1,4 +1,5 @@
-$focusedForeground: #1D1F21;
+$background: #1D1F21;
+$focusedForeground: $background;
 $focusedBackground: #C5C8C6;
 $occupiedForeground: #b294bb;
 $emptyForeground: #707880;
@@ -11,7 +12,7 @@ window {
 
 .barSection {
     border-radius: 0 0 12.5px 12.5px;
-    background: #1D1F21;
+    background: $background;
     color: #b0b4bc;
     min-height: 25px;
 }
@@ -47,11 +48,12 @@ window {
 
 // unfocused desktops
 .o, .f {
-
+    border-top: 2px solid $background;
 }
 
 // focused desktops
 .O, .F {
-    color: $focusedForeground;
-    background: $focusedBackground;
+    // color: $focusedForeground;
+    // background: $focusedBackground;
+    border-top: 2px solid $occupiedForeground;
 }

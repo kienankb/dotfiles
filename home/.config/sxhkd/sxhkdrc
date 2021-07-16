@@ -46,10 +46,10 @@ XF86AudioLowerVolume
 	pactl set-sink-volume 0 -5%
 
 XF86AudioPause
-	mpc toggle
+	playerctl play-pause
 
 XF86AudioPlay
-	mpc toggle
+	playerctl play-pause
 
 # Launch messenger
 super + shift + m

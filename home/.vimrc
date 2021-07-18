@@ -47,6 +47,7 @@ python3 powerline_setup()
 map <C-PageUp> :tabp<CR>
 map <C-PageDown> :tabn<CR>
 nnoremap <C-p> :Files<CR>
+nnoremap <C-S-f> :Ag 
 
 "" completor: tab to cycle, enter to complete
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"

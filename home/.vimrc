@@ -1,4 +1,3 @@
-set number
 set mouse=a
 syntax on
 set shiftwidth=4
@@ -39,7 +38,7 @@ call plug#end()
 colorscheme wal
 
 highlight Comment cterm=italic gui=italic
-highlight MatchParam term=underline cterm=underline ctermbg=NONE ctermfg=NONE
+highlight MatchParen cterm=underline ctermbg=NONE ctermfg=NONE
 
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()

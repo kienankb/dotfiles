@@ -4,7 +4,7 @@
 
 # term
 super + Return
-	kitty
+	alacritty
 
 # cmd launcher
 super + shift + space

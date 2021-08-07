@@ -12,6 +12,12 @@ set wildmode=longest:full
 set wildmenu
 set switchbuf+=usetab,newtab
 set nu rnu
+set updatetime=300
+
+filetype plugin indent on
+
+autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -34,7 +40,7 @@ Plug 'sainnhe/forest-night'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver', 'coc-snippets']
 
 if has('termguicolors')
   set termguicolors
@@ -42,11 +48,10 @@ endif
 
 set background=dark
 let g:everforest_background = 'hard'
-
 colorscheme everforest
 
 highlight Comment cterm=italic gui=italic
-highlight MatchParen cterm=underline ctermbg=NONE ctermfg=NONE
+highlight MatchParen term=underline cterm=underline ctermbg=NONE ctermfg=NONE
 
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()

@@ -12,7 +12,6 @@ set wildmode=longest:full
 set wildmenu
 set switchbuf+=usetab,newtab
 set nu rnu
-let g:completor_complete_options = "preview,menuone,noinsert"
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -25,7 +24,6 @@ Plug 'chrisbra/Colorizer'
 Plug 'vitalk/vim-simple-todo'
 Plug 'junegunn/goyo.vim'
 Plug 'flazz/vim-colorschemes'
-Plug 'maralla/completor.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
@@ -33,9 +31,19 @@ Plug 'dylanaraps/wal.vim'
 Plug 'tmsvg/pear-tree'
 Plug 'sheerun/vim-polyglot'
 Plug 'sainnhe/forest-night'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-colorscheme wal
+let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver']
+
+if has('termguicolors')
+  set termguicolors
+endif
+
+set background=dark
+let g:everforest_background = 'hard'
+
+colorscheme everforest
 
 highlight Comment cterm=italic gui=italic
 highlight MatchParen cterm=underline ctermbg=NONE ctermfg=NONE

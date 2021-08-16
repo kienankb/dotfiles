@@ -14,7 +14,6 @@ fi
 
 # Monitor setup for desktop
 if [ $(hostname) = ophelia ]; then
-	xrandr --output HDMI-0 --off
     ~/.screenlayout/triple-two-vertical.sh
 fi
 
@@ -36,7 +35,6 @@ bspc config left_padding			5
 if [ $(hostname) = miranda ]
 then
 	bspc monitor eDP1 -d        
-    bspc config -m eDP1 top_padding 30
 fi
 
 if [ $(hostname) = ophelia ]
@@ -46,7 +44,6 @@ then
 	bspc monitor DP-0 -d 
 	bspc monitor DP-2 -d 
 	bspc monitor HDMI-0 --remove
-    bspc config -m DP-4 top_padding 30
 fi
 
 # Set the wallpaper
@@ -74,9 +71,3 @@ bspc rule -a feh state=floating
 picom &
 redshift-gtk &
 dropbox &
-# run_keybase &
-# telegram-desktop &
-eww daemon
-sleep 1
-eww open bar_left
-eww open bar_right

@@ -3,18 +3,10 @@
 		"right": [
 			{
 				"function": "powerline.segments.common.bat.battery",
-				"args": {
-					"gamify": true,
-					"steps": 10
-				},
 				"priority": 50
 			},
 			{
 				"function": "powerline.segments.common.sys.uptime",
-				"priority": 50
-			},
-			{
-				"function": "powerline.segments.common.sys.system_load",
 				"priority": 50
 			},
 			{
@@ -30,11 +22,7 @@
 			},
 			{
 				"function": "powerline.segments.common.net.hostname"
-			},
-            {
-                "function": "powerline.segments.common.vcs.branch",
-                "priority": 50
-            }
+			}
 		]
 	}
 }

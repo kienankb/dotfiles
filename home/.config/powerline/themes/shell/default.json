@@ -22,14 +22,8 @@
 			},
 			{
 				"function": "powerline.segments.common.vcs.branch",
-				"priority": null
-			}
-		],
-		"right": [
-			{
-				"function": "powerline.segments.common.vcs.stash",
 				"priority": 50
 			}
-	    ]
+		]
 	}
 }

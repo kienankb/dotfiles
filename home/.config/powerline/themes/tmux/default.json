@@ -1,16 +1,12 @@
 {
 	"segments": {
 		"right": [
-            {
-                "function": "powerline.segments.common.vcs.branch",
-                "priority": null
-            },
 			{
-				"function": "powerline.segments.common.sys.uptime",
+				"function": "powerline.segments.common.bat.battery",
 				"priority": 50
 			},
 			{
-				"function": "powerline.segments.common.sys.system_load",
+				"function": "powerline.segments.common.sys.uptime",
 				"priority": 50
 			},
 			{

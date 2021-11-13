@@ -8,11 +8,11 @@ super + Return
 
 # cmd launcher
 super + shift + space
-	rofi -show run
+	rofi -theme ~/.config/rofi/slate-kkb.rasi -show run
 
 # app launcher
 super + space
-	rofi -show drun
+	rofi -theme ~/.config/rofi/slate-kkb.rasi -show drun
 
 # Scratchpad
 alt + s

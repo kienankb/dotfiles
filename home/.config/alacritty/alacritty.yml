@@ -47,8 +47,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 13
-    y: 13
+    x: 8
+    y: 8
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -174,33 +174,53 @@ font:
 # draw_bold_text_with_bright_colors: false
 
 colors:
-  # Default colors
   primary:
-    background: '0x252543'
-    foreground: '0xd8abb7'
-
-  # Normal colors
+    background: '#2e3440'
+    foreground: '#d8dee9'
+    dim_foreground: '#a5abb6'
+  cursor:
+    text: '#2e3440'
+    cursor: '#d8dee9'
+  vi_mode_cursor:
+    text: '#2e3440'
+    cursor: '#d8dee9'
+  selection:
+    text: CellForeground
+    background: '#4c566a'
+  search:
+    matches:
+      foreground: CellBackground
+      background: '#88c0d0'
+    bar:
+      background: '#434c5e'
+      foreground: '#d8dee9'
   normal:
-    black:   '0x252543'
-    red:     '0xca6875'
-    green:   '0x755a84'
-    yellow:  '0x775d87'
-    blue:    '0x895a81'
-    magenta: '0x8e668b'
-    cyan:    '0xab6884'
-    white:   '0xd8abb7'
-
-  # Bright colors
+    black: '#3b4252'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#81a1c1'
+    magenta: '#b48ead'
+    cyan: '#88c0d0'
+    white: '#e5e9f0'
   bright:
-    black:   '0x977780'
-    red:     '0xca6875'
-    green:   '0x755a84'
-    yellow:  '0x775d87'
-    blue:    '0x895a81'
-    magenta: '0x8e668b'
-    cyan:    '0xab6884'
-    white:   '0xd8abb7'
-
+    black: '#4c566a'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#81a1c1'
+    magenta: '#b48ead'
+    cyan: '#8fbcbb'
+    white: '#eceff4'
+  dim:
+    black: '#373e4d'
+    red: '#94545d'
+    green: '#809575'
+    yellow: '#b29e75'
+    blue: '#68809a'
+    magenta: '#8c738c'
+    cyan: '#6d96a5'
+    white: '#aeb3bb'
 # Bell
 #
 # The bell is rung every time the BEL control character is received.

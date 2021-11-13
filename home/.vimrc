@@ -46,12 +46,13 @@ if has('termguicolors')
   set termguicolors
 endif
 
-set background=dark
-let g:everforest_background = 'hard'
-colorscheme everforest
+colorscheme nord
 
 highlight Comment cterm=italic gui=italic
 highlight MatchParen term=underline cterm=underline ctermbg=NONE ctermfg=NONE
+highlight Normal ctermbg=NONE guibg=NONE
+highlight LineNr ctermbg=NONE guibg=NONE
+highlight SignColumn ctermbg=NONE guibg=NONE
 
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()

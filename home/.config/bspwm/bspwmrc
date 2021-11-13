@@ -24,10 +24,10 @@ if [ $(hostname) = miranda ]; then
 	synclient PalmDetect=1
 fi
 
-bspc config bottom_padding			5
-bspc config top_padding				5
-bspc config right_padding			5
-bspc config left_padding			5
+bspc config bottom_padding			0
+bspc config top_padding				0
+bspc config right_padding			0
+bspc config left_padding			0
 
 if [ $(hostname) = miranda ]
 then
@@ -47,8 +47,8 @@ fi
 #eval $(cat ~/.config/.fehbg)
 wal -i ~/.wallpaper
 
-bspc config window_gap				5
-bspc config border_width			1
+bspc config window_gap				0
+bspc config border_width			0
 bspc config normal_border_color		\#555555
 bspc config active_border_color		\#555555
 bspc config focused_border_color	\#BBBBBB

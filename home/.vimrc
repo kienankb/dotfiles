@@ -42,10 +42,10 @@ Plug 'dylanaraps/wal.vim'
 Plug 'tmsvg/pear-tree'
 Plug 'sheerun/vim-polyglot'
 Plug 'sainnhe/forest-night'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver', 'coc-rls', 'coc-snippets']
+"" let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver', 'coc-rls', 'coc-snippets']
 
 if has('termguicolors')
   set termguicolors

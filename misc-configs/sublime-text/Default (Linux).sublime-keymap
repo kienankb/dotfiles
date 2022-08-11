@@ -1,6 +1,0 @@
-[
-    {"keys": ["ctrl+alt+m"], "command": "toggle_menu"},
-    {"keys": ["ctrl+alt+t"], "command": "toggle_tabs"},
-    {"keys": ["ctrl+alt+i"], "command": "toggle_minimap"},
-    {"keys": ["ctrl+alt+s"], "command": "toggle_status_bar"},
-]

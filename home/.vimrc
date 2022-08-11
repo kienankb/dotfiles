@@ -14,6 +14,10 @@ set switchbuf+=usetab,newtab
 set nu rnu
 set updatetime=300
 
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'bubblegum'
+
 filetype plugin indent on
 
 autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
@@ -26,8 +30,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'chrisbra/Colorizer'
-Plug 'vitalk/vim-simple-todo'
 Plug 'junegunn/goyo.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
@@ -37,10 +42,10 @@ Plug 'dylanaraps/wal.vim'
 Plug 'tmsvg/pear-tree'
 Plug 'sheerun/vim-polyglot'
 Plug 'sainnhe/forest-night'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver', 'coc-rls', 'coc-snippets']
+"" let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-tsserver', 'coc-rls', 'coc-snippets']
 
 if has('termguicolors')
   set termguicolors
@@ -53,9 +58,6 @@ highlight MatchParen term=underline cterm=underline ctermbg=NONE ctermfg=NONE
 highlight Normal ctermbg=NONE guibg=NONE
 highlight LineNr ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE
-
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
 
 map <C-PageUp> :tabp<CR>
 map <C-PageDown> :tabn<CR>

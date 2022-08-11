@@ -1,8 +1,0 @@
-include /usr/local/share/nano/*
-set smarthome
-set smooth
-unset historylog
-set tabsize 4
-set autoindent
-set quickblank
-set nohelp

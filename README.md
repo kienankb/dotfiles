@@ -1,4 +1,4 @@
-== what to do with a new mac
+## what to do with a new mac
 
 1. go through and change all the settings
 2. install the stuff in `install/applications`

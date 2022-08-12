@@ -17,6 +17,7 @@ set updatetime=300
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'bubblegum'
+let g:airline#extensions#tmuxline#enabled = 0
 
 filetype plugin indent on
 
@@ -42,6 +43,7 @@ Plug 'dylanaraps/wal.vim'
 Plug 'tmsvg/pear-tree'
 Plug 'sheerun/vim-polyglot'
 Plug 'sainnhe/forest-night'
+Plug 'edkolev/tmuxline.vim'
 "" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 

@@ -1,7 +1,3 @@
-gitui
-exa
-tmux
-python@3.10
-thefuck
-the_silver_searcher
-bat
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font alacritty
+brew install gitui exa tmux python@3.10 thefuck the_silver_searcher bat

@@ -1,7 +1,8 @@
 ## what to do with a new mac
 
 1. go through and change all the settings
-2. install the stuff in `install/applications`
-3. install homebrew
-4. set up bash, git, ssh key, patched Hack font, nvm
-5. install the stuff in `install/homebrew`
+2. install homebrew and set up bash
+3. run `install/homebrew`
+4. symlink config files
+5. set up git, ssh key, nvm, rustup
+6. install the stuff in `install/applications`
